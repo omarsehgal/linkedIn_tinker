@@ -1,0 +1,2670 @@
+<!DOCTYPE HTML>
+<html lang="en"><head> 
+ <script type="text/javascript">
+ if (!window.i18n) { window.i18n = {}; }
+
+ // global webtrack object for timing information
+ var WEBTRACK_GLOBAL = {
+ softTimings: {},
+ hardTimings: {},
+ seedTime: null,
+ now: function() { return (new Date()).getTime(); },
+ lapse: function() { return this.now() - this.seedTime; },
+ get: function(name) { return (this.hardTimings[name]) ? this.hardTimings[name] : this.softTimings[name]; },
+ getSoftTimings: function() { return this.softTimings; },
+ set: function(name, val) { this.hardTimings[name] = (val*-1 > 0) ? null : val*1; },
+ record: function(name) { this.softTimings[name] = this.now(); },
+ clean: function() {} // FIXME
+ };
+ WEBTRACK_GLOBAL.seedTime = WEBTRACK_GLOBAL.now();
+ </script>
+
+ 
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=9">
+ <meta name="pageImpressionID" content="f527acfe-033d-464c-9d0b-fdd745a9321c">
+ <meta name="pageKey" content="nprofile-edit-success">
+ <meta name="analyticsURL" content="/analytics/noauthtracker">
+ <link rel="openid.server" href="https://www.linkedin.com/uas/openid/authorize">
+ <link rel="apple-touch-icon-precomposed" href="http://www.linkedin.com/img/icon/apple-touch-icon.png">
+ <!--[if (!IE)|(lt IE 9)]-->
+ <link rel="shortcut icon" type="image/ico" href="http://static01.linkedin.com/scds/common/u/img/favicon_v3.ico">
+ <!--[endif]-->
+ <!--[if gte IE 9]>
+ <link rel="shortcut icon" type="image/ico" href="http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico">
+ <meta name="msapplication-task" content="name=Home;action-uri=/home?trk=ie_sm_home;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <meta name="msapplication-task" content="name=My Inbox;action-uri=/inbox/messages/received?trk=ie_sm_inbox;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <meta name="msapplication-task" content="name=My Profile;action-uri=/myprofile?trk=ie_sm_pro;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <meta name="msapplication-task" content="name=My Connections;action-uri=/connections?trk=ie_sm_cnts;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <meta name="msapplication-task" content="name=My Groups;action-uri=/myGroups?trk=ie_sm_grps;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <![endif]-->
+ 
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('preGlobalHeadCSS');
+ }
+ </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <link rel="stylesheet" type="text/css" href="edit_files/css.css">
+ 
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('postGlobalHeadCSS');
+ }
+ </script>
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('preGlobalHeadJS');
+ }
+ </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript" src="edit_files/js_002"></script>
+ 
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('postGlobalHeadJS');
+ }
+ </script>
+ 
+ 
+<link rel="stylesheet" type="text/css" href="edit_files/css_002.css">
+                  
+                
+              
+          
+        
+      
+    
+
+      
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+                  
+                    <script type="text/javascript" src="edit_files/js"></script>
+                  
+                  
+                
+              
+          
+        
+      
+    
+      <script type="text/javascript">document.cookie='lang="v=2&lang=en&c="; expires=-1; domain=linkedin.com; version=0; path=/;';</script><title>Tinkering with LinkedIn Profile</title>
+  
+      
+    
+	
+      
+    
+      
+    
+
+      
+    
+      
+    
+      
+    
+      
+    
+
+      
+      
+      
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+<script type="text/javascript">
+ 
+ /* extlib: _styleddropdown */
+ 
+ 
+ 
+ LI.Controls.addControl('control-1', 'StyledDropdown', { name: 'universal-search-selector', align: 'right' });
+ 
+
+ 
+ /* extlib: _universalsearch */
+ LI.i18n.register( 'universal-search-connections', 'Connections' );
+LI.i18n.register( 'universal-search-companies', 'Companies' );
+LI.i18n.register( 'universal-search-groups', 'Groups' );
+LI.i18n.register( 'universal-search-features', 'Features' );
+LI.i18n.register( 'universal-search-skills', 'Skills' );
+LI.i18n.register( 'universal-search-skill', 'Skill' );
+LI.i18n.register( 'universal-search-polls', 'Polls' );
+LI.i18n.register( 'universal-search-polls-pro', '<strong>Poll<\/strong> LinkedIn Professionals' );
+
+ 
+ 
+ LI.Controls.addControl('control-2', 'UniversalSearch', {
+ field: "main-search-box",
+ user_id: 13342126,
+ userProfileImage: "http://media02.linkedin.com/mpr/mpr/shrink_40_40/p/3/000/001/08d/21820f5.jpg",
+ pollsAvatar: "http://static02.linkedin.com/scds/common/u/img/icon/icon_q_30x30.gif",
+ pollsLink: "/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=1900&amp;_applicationId=1900&amp;_ownerId=0&amp;osUrlHash=E3TZ",
+ pollsTriggerWords: "what,where,how,who,when,why,which,are,arent,aren't,can,cant,can't,could,couldnt,couldn't,do,does,doesnt,doesn't,dont,don't,had,hadnt,hadn't,has,hasnt,hasn't,have,havent,haven't,hows,how's,if,is,isnt,isn't,should,shouldnt,shouldn't,whats,what's,whens,when's,wheres,where's,whom,whos,who's,whose,whys,why's,wont,won't,would,wouldnt,wouldn't",
+ searchTypeMenu: "main-search-category",
+ leoTypeaheadRoot: "/typeahead",
+ enableTypeahead: true,
+ searchLink: "search-link",
+ loadingImgSrc: "http://static01.linkedin.com/scds/common/u/img/anim/anim_loading_16x16.gif",
+ typeaheadABTest: "NOTC",
+ matching: "standard"
+ });
+ 
+
+ 
+ /* extlib: _navigationmenu */
+ 
+ 
+ 
+ LI.Controls.addControl('control-3', 'NavigationMenu', { 
+ remoteMenus : {
+ inbox : {
+ id : 'nav-primary-inbox',
+ url : (/^https/.test(window.location.href)) ? '' : '\/inbox\/summary',
+ css : LI.InboxNav.Styles,
+ js : LI.InboxNav.Scripts
+ },
+ company : {
+ id : 'nav-primary-company',
+ url : '/company/chrome/nav'
+ }
+ }
+ });
+ </script><script type="text/javascript">
+                    
+      
+        
+        
+        /* extlib: _toggleclass */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-4', 'ToggleClass', {
+            classname: 'is-post-mode',
+            on: '#post-module',
+            stopEvent: true
+          });
+                  
+
+                    
+      
+    
+            LI.Controls.addControl('control-5', 'ToggleClass', {
+            classname: 'is-post-mode',
+            on: '#post-module',
+            stopEvent: true
+          });
+                  
+
+ 
+ /* extlib: _ghostlabel */
+ 
+ 
+ 
+ LI.Controls.addControl('control-6', 'GhostLabel', {});
+ 
+
+ 
+ /* extlib: _sharepostmodule */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+LI.ShareUrlRegExTestB = /(?:(?:https?:\/\/(?:[A-Z0-9][A-Z0-9_\-]*\.)+[a-z]{2,4}|(?:[A-Z0-9][A-Z0-9_\-]*\.)+(?:com|edu|net|org))(?::(?:\d+))?)(?:\/[^\s]*)?/i;
+ 
+ 
+ LI.Controls.addControl('control-7', 'SharePostModule', {
+ getObjectURL: '/share?getPreview=&url=',
+ postModuleURL: '/nhome/postModule',
+ injectionMode: 'reload',
+ focusOnPageLoad: false,
+ urlRegEx: false
+ });
+ 
+
+ 
+ /* extlib: _checktextarea */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'CheckTextarea-error', 'You have exceeded the maximum length by <strong>{0}<\/strong> character(s).' );
+LI.i18n.register( 'CheckTextarea-empty',   'You may add up to <strong>{0}<\/strong> characters.' );
+LI.i18n.register( 'CheckTextarea-full', 'You may not add more characters.' );
+LI.i18n.register( 'CheckTextarea-countdown',   'You may add up to <strong>{0}<\/strong> more characters.' );
+LI.i18n.register( 'CheckTextarea-twitter-under', 'Count: <strong>{1}<\/strong>' );
+LI.i18n.register( 'CheckTextarea-twitter-over',   'Count: <strong>{1}<\/strong> (Only 140 characters will show on Twitter) ' );
+ 
+ 
+ LI.Controls.addControl('control-8', 'CheckTextarea', { 
+ maxLength: 600, 
+ grow: { onFocus: 35 },
+ useTwitterCountdown: 'post-cc-twitter'
+ });
+ 
+
+ 
+ 
+ LI.Controls.addControl('control-9', 'StyledDropdown', { listClass: 'drop' });
+ 
+
+ 
+ /* extlib: _nustweetstatus */
+ 
+ 
+ 
+ LI.Controls.addControl('control-10', 'NusTweetStatus', {
+ mode: 'multiple-accounts',
+ popupURL: 'https://www.linkedin.com/secure/tether?start=&provider=TWITTER&mini=&twitterSettings=upsell&twitterSettingsHideProfile=false&trk=spm_twit_add',
+ settingsURL: 'https://www.linkedin.com/secure/settings?twitterSettings=&trk=spm_twit_setngs',
+ selectId: 'post-twit-account-select',
+ ulId: 'post-twit-account-list',
+ i18n: {
+ editLinkText: 'Twitter Settings',
+ logoTooltip: 'Tweet this as omarsehgal'
+ }
+ });
+ 
+
+                    
+        /* extlib: _dialog */
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'Dialog-closeWindow', 'Close this window' );
+LI.i18n.register( 'Dialog-or',   'or' );
+LI.i18n.register( 'Dialog-cancel', 'Cancel' );
+LI.i18n.register( 'Dialog-submit',   'Submit' );
+LI.i18n.register( 'Dialog-error-generic',   'We\'re sorry. Something unexpected happened and your request could not be completed. Please try again.' );
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+  
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+LI.ComposeDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://static01.linkedin.com/scds/concat/common/js?h=a1qcfld6rclqcxobdl96wei6s"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=b6a15x3mhw53jqxn6h8454h8x"]
+              
+            
+          
+        
+      
+    
+};
+
+LI.FeedbackDialogDependencies = {
+  url: '/lite/feedback-form',
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=dfeel1pw0g1k0i02ad5s9qpve"]
+              
+            
+          
+        
+      
+    
+};
+
+LI.WhoSharedDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://static01.linkedin.com/scds/concat/common/js?h=d75r0d3v3wnz162gsnfx3jalf-1mxovmzyj16fqqini1y9aio4c-4mdnhz5oidl95blrmjxaw7815-7kikx4cof8m5xywfppkzcv0gx-dpd1zk8wo0d626juzinrxcaxh-a4vb3naxqpmnt35pswe1bh9f6"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=1z88mn84qz9i0wwqc56umb2yh-f0d6obb5jo8x5ff7g5f3w99ln-6p48z49pi4sggv71v0l8tblx9-9657npvuqlf5ozaxhw1ktiihn"]
+              
+            
+          
+        
+      
+    
+};
+        
+    
+            LI.Controls.addControl('control-11', 'Dialog', {
+                     name: 'addNewSections',
+                     type: 'interrupt',
+                     width: 800,
+                     className: 'adding-sections',
+                     content: { 
+                       url: '/profile/add-profile-section-modal?goback=%2Enpe_*1_*1_*1_*1', 
+                       title: 'Add Sections' 
+                     }
+                   });
+                  
+
+                    
+        /* extlib: _sortable_section */
+          
+        
+    
+            LI.Controls.addControl('control-12', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'SUM',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-13', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'APP',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-14', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'EXP',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-15', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'EDU',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-16', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'REC',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-17', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'ADD',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-18', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'PER',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-19', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'CON',
+                    group: 'profile'
+                  });
+                  
+
+                    
+        /* extlib: _sortable_region */
+          
+        
+    
+            LI.Controls.addControl('control-20', 'Sortable.Region', {
+            constants: 'LI.Profile.Constants',
+            onCreatePostData: LI.Profile.SortableSection.onCreatePostData,
+            helpText: 'Drag to rearrange profile sections',
+            group: 'profile',
+            useForm: 'form',
+            createPostDataConfig: {
+              orderInputId: 'sectionOrder-sectionReorderForm'
+            },
+            onSuccess: function(o) {
+             
+              YDom.get('timestamp-sectionReorderForm').value=o.responseText.timestamp;
+            }
+          });
+                  
+
+                    
+      
+    
+            LI.Controls.addControl('control-21', 'Dialog', {
+            name: 'uploadResumeDialog',
+            type: 'task-modless',
+            content: { 
+              node: 'upload-resume', 
+              title: '<strong>Import your r&eacute;sum&eacute; <\/strong>' 
+            }
+          });
+                  
+
+                    
+      
+        
+        
+        /* extlib: _profileresumeimportdialog */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-22', 'ProfileResumeImportDialog', {});
+                  
+
+                    
+      
+        
+        
+        /* extlib: _nusdeleteupdate */
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'NusDeleteUpdate-are-you', 'Are you sure you want to delete this update?' );
+LI.i18n.register( 'NusDeleteUpdate-yes',   'Yes, please delete it' );
+LI.i18n.register( 'NusDeleteUpdate-or', 'or' );
+LI.i18n.register( 'NusDeleteUpdate-cancel',   'Cancel' );
+LI.i18n.register( 'NusDeleteUpdate-please-confirm',   'Please Confirm' );
+
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-23', 'NusDeleteUpdate', {});
+                  
+
+                    
+      
+        
+        
+        /* extlib: _nusliking */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-24', 'NusLiking', {});
+                  </script><script type="text/javascript">
+ 
+ 
+ LI.Controls.setInitialized(YDom.get('control-25'));
+ </script><script src="edit_files/quant.js" type="text/javascript" id="yui__dyn_0"></script><script src="edit_files/beacon.js" type="text/javascript" id="yui__dyn_1"></script></head><body class="en member v2 edit-my-profile js " id="pagekey-nprofile-edit-success"><div style="position: absolute; visibility: hidden; cursor: move; border: 2px solid rgb(170, 170, 170); z-index: 999; height: 25px; width: 25px;" id="ygddfdiv"><div style="height: 100%; width: 100%; background-color: rgb(204, 204, 204); opacity: 0;"></div></div><div id="universal-typeahead-results" class="typeahead-results-container yui-ac-container"><div style="display: none;" class="yui-ac-content"><div style="display: none;" class="yui-ac-hd"></div><div class="yui-ac-bd"><ul><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li></ul></div><div style="display: none;" class="yui-ac-ft"></div></div></div>
+
+ 
+<script type="text/javascript">document.body.className += " js " /*@cc_on+'ie'+ScriptEngineMinorVersion()@*/;</script>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+ LI.define( 'InboxNav.Styles' );
+ LI.InboxNav.Styles = 
+ ["http://static01.linkedin.com/scds/concat/common/css?h=4rkktcgkvi2tx64prc0r9rp5b"]
+ ;
+ LI.define( 'InboxNav.Scripts' );
+ LI.InboxNav.Scripts = 
+ ["http://static01.linkedin.com/scds/concat/common/js?h=em1445ff7g1bpi7y8m5y0fje5-aaod7sf2exa7qhhbzubedjht1-64fe72oeb6wavykgur2dpdkrp-8yquvi1k1eb17i0yytgzcszxl-af6eo1jj5h8jrywnsai6zvjla-4yixzol6l99mn6u96dseifu73-5lheixnrmned0v6r9szhepzfx-7jj4yp05oyyfdlbn17ncvfrbx"]
+ ;
+ </script>
+
+ 
+ <div id="header" class="global-nav member">
+ <div class="wrapper">
+ 
+ <ul class="util">
+ <li class="tab"> 
+ <a href="http://www.linkedin.com/profile/edit?trk=h-gnav-name-link-0" class="username"> 
+Omar Sehgal </a> 
+ <ul class="menu">
+ <li>
+ <a href="http://www.linkedin.com/profile/edit?trk=tab_pro" class="username">
+Omar Sehgal </a>
+ </li>
+ <li id="nav-utility-acct"><a href="https://www.linkedin.com/secure/settings?trk=hb_acc">Settings</a></li>
+ <li id="nav-utility-auth"><a href="https://www.linkedin.com/secure/login?session_full_logout=&amp;trk=hb_signout">Sign Out</a></li>
+ </ul>
+ </li>
+ <li class="jump"><a href="#main">Skip to Content</a></li>
+ <li class="jump"><a href="#global-search">Search</a></li>
+ <li><a href="https://www.linkedin.com/secure/importAndInvite?trk=hb_add_conn" class="add-conx"><strong>Add Connections</strong></a></li>
+ <li class="signout"><a href="https://www.linkedin.com/secure/settings?trk=hb_acc">Settings</a></li>
+ <li class="signout"><a href="https://www.linkedin.com/secure/login?session_full_logout=&amp;trk=hb_signout">Sign Out</a></li>
+ </ul>
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('clientTimeToFirstPixel');
+ }
+ </script> 
+ 
+ <h1 class="logo"><a href="http://www.linkedin.com/?trk=hb-0-h-logo" title="Home"> LinkedIn</a></h1>
+ 
+ <div class="account">
+ <a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;_pt=sub&amp;trk=home_level">
+ Account Type: Basic
+ </a>
+ </div>
+ </div>
+ 
+ <div class="bar">
+ <div class="wrapper">
+ 
+ <ul class="nav">
+ <li id="nav-primary-home" class="tab">
+ <a href="http://www.linkedin.com/home?trk=hb_tab_home_top"><span>Home</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/home?trk=hb_tab_home">LinkedIn Home</a></li>
+ <li>
+ <a href="http://www.linkedin.com/advertising?src=en-all-el-li-hb_tab_ads&amp;utm_medium=el&amp;utm_source=li&amp;utm_campaign=hb_tab_ads&amp;trk=hb_tab_ads">Advertise on Linkedin</a>
+ </li> 
+ </ul>
+ </li>
+ <li id="nav-primary-profile" class="tab">
+ <a href="http://www.linkedin.com/profile/edit?trk=hb_tab_pro_top"><span>Profile</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/profile/edit?trk=tab_pro">Edit Profile</a></li>
+ <li><a href="http://www.linkedin.com/profile/view?id=13342126&amp;trk=tab_pro">View Profile</a></li>
+ <li><a href="http://www.linkedin.com/references?mrs=">Recommendations</a></li>
+ <li><a href="http://www.linkedin.com/organizer?trk=hb_tab_organizer">Profile Organizer</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-contacts" class="tab">
+ <a href="http://www.linkedin.com/connections?trk=hb_tab_cnts_top"><span>Contacts</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/connections?trk=hb_tab_connections">My Connections</a></li>
+ <li><a href="https://www.linkedin.com/secure/importAndInvite?trk=hb_add_conn">Add Connections</a></li>
+ <li><a href="http://www.linkedin.com/network?trk=hb_tab_net">Network Statistics</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-groups" class="tab">
+ <a href="http://www.linkedin.com/myGroups?trk=hb_side_grps_top"><span>Groups</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/myGroups?trk=hb_side_mygrps">Your Groups</a></li>
+ <li><a href="http://www.linkedin.com/groupsDirectory?recommendations=&amp;trk=hb_side_gyml">Groups You May Like</a></li>
+ <li><a href="http://www.linkedin.com/groupsDirectory?trk=hb_side_grpsdir">Groups Directory</a></li>
+ <li><a href="http://www.linkedin.com/createGroup?displayCreate=&amp;trk=hb_side_crgrp">Create a Group</a></li>
+ <li class="user-group separator"><a href="http://www.linkedin.com/groups?gid=3852152&amp;trk=hb_side_g">Internet Advertising Class Spring 2011, Stanford</a></li>
+ <li class="user-group"><a href="http://www.linkedin.com/groups?gid=92146&amp;trk=hb_side_g">Returning Indians - NRI's, Returned Indians &amp; Expatriates</a></li>
+ <li class="user-group"><a href="http://www.linkedin.com/groups?gid=22413&amp;trk=hb_side_g">Ruby on Rails</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-jobs" class="tab">
+ <a href="http://www.linkedin.com/jobs?displayHome=&amp;trk=hb_tab_jobs_top"><span>Jobs</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/jobs?displayHome=&amp;trk=hb_tab_findjobs">Find Jobs</a></li>
+ <li>
+ <a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;ups=jobseeker&amp;_pt=sub&amp;trk=hb_tab_jss">Job Seeker Premium</a>
+ </li>
+ <li><a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;ups=hiring&amp;_pt=sub&amp;trk=lnl_job_nav">Find Talent</a></li>
+ <li class="separator"><a href="http://www.linkedin.com/hiring?editAttributes=&amp;trk=hb_tab_postjob">Post a Job</a></li>
+ <li><a href="http://www.linkedin.com/hiring?manageActives=&amp;trk=hb_tab_mngjob">Manage Jobs</a></li>
+ <li><a href="http://www.linkedin.com/hiring?trk=hb_tab_hire">Hiring Solutions</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-inbox" class="tab">
+ <a href="http://www.linkedin.com/inbox/messages/received?trk=hb_tab_inbox_top">
+ <span>
+ Inbox
+ </span>
+ </a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/inbox/invitations/pending">Accept Invitations</a></li>
+ <li>
+ <a href="http://www.linkedin.com/inbox/messages/received?trk=hd_tab_received">
+ View Messages
+ </a>
+ </li>
+ <li><a href="http://www.linkedin.com/msgToConns?displayCreate=&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=hb_tab_cmpmsg">Compose Message</a></li>
+ <li class="separator"><a href="http://www.linkedin.com/inbox/messages/received?trk=hd_tab_received">Inbox</a></li> 
+ <li><a href="http://www.linkedin.com/inbox/messages/sent?trk=hd_tab_sent">Sent</a></li>
+ <li><a href="http://www.linkedin.com/inbox/messages/archive?trk=hd_tab_archive">Archived</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-company" class="tab">
+ <a href="http://www.linkedin.com/companies?trk=hb_tab_compy"><span>Companies</span></a>
+ <ul id="nav-primary-companies-menu" class="menu">
+ <li><a href="http://www.linkedin.com/companies?trk=hb_tab_compy">Find Companies</a></li>
+ <li><a href="http://www.linkedin.com/companies?dspFllwed=&amp;trk=hb_tab_compy_flw">Companies You Follow</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-news" class="tab">
+ <a href="http://www.linkedin.com/today/?trk=hb_tab_news"><span>News</span></a>
+ <ul id="nav-primary-companies-menu" class="menu">
+ <li><a href="http://www.linkedin.com/today/?trk=hb_tab_to">LinkedIn Today</a></li>
+ <li><a href="http://www.linkedin.com/today/saved?trk=hb_tab_svd">Saved Articles</a></li>
+ <li><a href="http://www.linkedin.com/signal/?trk=hb_tab_sgnl">Signal</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-more" class="tab">
+ <a href="#nav-primary-more-menu"><span>More</span></a>
+ <ul id="nav-primary-more-menu" class="menu">
+ <li><a href="http://www.linkedin.com/answers?trk=hb_tab_ayn">Answers</a></li>
+ <li><a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Flearn%2Elinkedin%2Ecom%2F&amp;urlhash=YK4z">Learning Center</a></li>
+ <li><a href="http://www.linkedin.com/skills/?trk=skills-global-nav">Skills <sup class="icon-beta">beta</sup></a></li>
+ <li><a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;_pt=sub&amp;trk=nav_more_end_middle">Upgrade My Account</a></li>
+ <li id="nav-my-apps" class="separator"><span class="title">My Applications</span>
+ <ul>
+ <li>
+ <a href="http://www.linkedin.com/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=20&amp;_applicationId=1700&amp;_ownerId=13342126&amp;osUrlHash=mZnA&amp;trk=hb_side_apps" name="bar">Reading List by Amazon</a>
+ </li>
+ <li>
+ <a href="http://www.linkedin.com/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=30&amp;_applicationId=2000&amp;_ownerId=13342126&amp;osUrlHash=j7bB&amp;trk=hb_side_apps" name="bar">Events</a>
+ </li>
+ <li>
+ <a href="http://www.linkedin.com/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=80&amp;_applicationId=1900&amp;_ownerId=13342126&amp;osUrlHash=o9xM&amp;trk=hb_side_apps" name="bar">Polls</a>
+ </li>
+ <li><a href="http://www.linkedin.com/static?key=application_directory&amp;trk=hb_side_apps">Get More Applications...</a></li>
+ </ul>
+ </li>
+ </ul>
+ </li>
+ </ul>
+ 
+ 
+ <form id="global-search" action="/search/fpsearch" method="get" accept-charset="UTF-8" name="commonSearch" class="global-search">
+ <fieldset>
+ <legend><span>Find People, Jobs, Answers, and More</span></legend>
+ <label for="main-search-category">Search for:</label>
+ 
+ <div id="yui-gen1" class="search-scope styled-dropdown">
+ <span class="label"> <span> People </span> </span><select name="type" id="main-search-category" class="search-category">
+ 
+ <option selected="selected" class="/search?trk=advsrch" data-li-search-action="/search/fpsearch" title="Keyword, name, company or title" value="people">People</option>
+
+ <option data-li-search-action="/signal/" title="Keyword, company or job title" value="updates">Updates</option>
+
+ <option class="/jobs?search=&amp;trk=hb_advjs" data-li-search-action="/jsearch" title="Keyword, company or job title" value="jobs">Jobs</option>
+ 
+ <option data-li-search-action="/csearch/results" title="Keyword" value="companies">Companies</option>
+ 
+ <option class="/searchAnswers?search=&amp;trk=advsrch" title="Keyword" value="answers">Answers</option>
+ 
+ <option title="Keyword" value="inbox">Inbox</option>
+ 
+ <option title="Keyword" value="groups">Groups</option>
+ </select>
+ 
+ <ul>
+ <li class="separator suggestion-toggle state-on">
+ <div>
+ <span class="off-toggle">Turn off suggestions</span>
+ <span class="on-toggle">Turn on suggestions</span>
+ </div>
+ </li>
+ </ul>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-1" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _styleddropdown */
+ 
+ 
+ 
+ LI.Controls.addControl('control-1', 'StyledDropdown', { name: 'universal-search-selector', align: 'right' });
+ </script>
+ 
+ 
+ <span id="search-autocomplete-container" title="Tip: You can also search by keyword, company, school..." class="/typeahead">
+ <input name="keywords" id="main-search-box" class="search-term yui-ac-input" autocomplete="off" type="text">
+ <input name="pplSearchOrigin" value="GLHD" type="hidden">
+ <input name="pageKey" value="nprofile-edit-success" type="hidden">
+ <span id="search-typeahead-container"></span>
+ </span>
+ <input name="search" value="Search" class="search-go" type="submit">
+ </fieldset>
+ 
+ <a id="search-link" href="http://www.linkedin.com/search?trk=advsrch">Advanced</a>
+ 
+ </form>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-2" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _universalsearch */
+ LI.i18n.register( 'universal-search-connections', 'Connections' );
+LI.i18n.register( 'universal-search-companies', 'Companies' );
+LI.i18n.register( 'universal-search-groups', 'Groups' );
+LI.i18n.register( 'universal-search-features', 'Features' );
+LI.i18n.register( 'universal-search-skills', 'Skills' );
+LI.i18n.register( 'universal-search-skill', 'Skill' );
+LI.i18n.register( 'universal-search-polls', 'Polls' );
+LI.i18n.register( 'universal-search-polls-pro', '<strong>Poll<\/strong> LinkedIn Professionals' );
+
+ 
+ 
+ LI.Controls.addControl('control-2', 'UniversalSearch', {
+ field: "main-search-box",
+ user_id: 13342126,
+ userProfileImage: "http://media02.linkedin.com/mpr/mpr/shrink_40_40/p/3/000/001/08d/21820f5.jpg",
+ pollsAvatar: "http://static02.linkedin.com/scds/common/u/img/icon/icon_q_30x30.gif",
+ pollsLink: "/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=1900&amp;_applicationId=1900&amp;_ownerId=0&amp;osUrlHash=E3TZ",
+ pollsTriggerWords: "what,where,how,who,when,why,which,are,arent,aren't,can,cant,can't,could,couldnt,couldn't,do,does,doesnt,doesn't,dont,don't,had,hadnt,hadn't,has,hasnt,hasn't,have,havent,haven't,hows,how's,if,is,isnt,isn't,should,shouldnt,shouldn't,whats,what's,whens,when's,wheres,where's,whom,whos,who's,whose,whys,why's,wont,won't,would,wouldnt,wouldn't",
+ searchTypeMenu: "main-search-category",
+ leoTypeaheadRoot: "/typeahead",
+ enableTypeahead: true,
+ searchLink: "search-link",
+ loadingImgSrc: "http://static01.linkedin.com/scds/common/u/img/anim/anim_loading_16x16.gif",
+ typeaheadABTest: "NOTC",
+ matching: "standard"
+ });
+ </script>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-3" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _navigationmenu */
+ 
+ 
+ 
+ LI.Controls.addControl('control-3', 'NavigationMenu', { 
+ remoteMenus : {
+ inbox : {
+ id : 'nav-primary-inbox',
+ url : (/^https/.test(window.location.href)) ? '' : '\/inbox\/summary',
+ css : LI.InboxNav.Styles,
+ js : LI.InboxNav.Scripts
+ },
+ company : {
+ id : 'nav-primary-company',
+ url : '/company/chrome/nav'
+ }
+ }
+ });
+ </script>
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ LI_WCT([
+ "control-1",
+ "control-2",
+ "control-3",
+ ]);
+ 
+ 
+ 
+ </script>
+ 
+ 
+ 
+
+<hr>
+
+<div id="body">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+  
+ 
+ 
+
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+<div id="section-header">
+  <ul id="nav-secondary">
+    <li id="nav-edit-profile"><a href="http://www.linkedin.com/profile/edit?locale=en_US"><span>Edit Profile</span></a></li>
+    <li id="nav-my-profile"><a href="http://www.linkedin.com/profile/view?id=13342126&amp;locale=en_US&amp;trk=tab_pro"><span>View Profile</span></a></li>
+  </ul>
+</div>
+
+ <div class="wrapper">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<div id="global-error">
+</div>
+
+
+    
+
+    <!-- leo:gobackTemplateLinks/ -->
+
+    <div id="main" class="profile grid-a">
+      <div id="content" class="">
+        <div class="profile-header">
+          <div class="masthead vcard contact" id="member-13342126">
+
+      
+      
+  
+  
+<div class="image" style="display: block;" id="profile-picture">
+            <a href="http://www.linkedin.com/memberPicture?display=&amp;goback=%2Enpe_*1_*1_*1_*1">
+              <img src="edit_files/21820f5.jpg" class="photo" alt="Omar Sehgal" width="80" height="80">
+            </a>
+            <p class="caption">
+              <span class="edit">
+                <%= link_to 'Click to Edit', edit_user_path(@user) %>
+              </span>
+            </p>
+</div>
+<h1>
+          <span id="name" class="n fn">
+            <span class="given-name"><%= @user.name %></span>
+          </span>
+          <span class="edit">
+                <%= link_to 'Click to Edit', edit_user_path(@user) %>
+          </span>
+</h1>
+
+<p class="title" style="display: block;">
+        <%= @user.title %>
+</p>
+
+<dl id="headline" class="demographic-info adr">
+    <dt>Location</dt>
+    <dd class="locality">
+	      <%= @user.location %>
+    </dd>
+	<dt>Industry</dt>
+        <dd class="industry">
+            Computer Software
+    </dd>
+  </dl>
+   <dl id="headline" class="demographic-info adr">
+    <dt>Email</dt>
+    <dd class="locality">
+	      <%= @user.email %>
+    </dd>
+</dl>
+        
+      
+
+
+<div class="post-profile" id="post-module">
+    
+        <p class="my-current">
+          
+            <a id="yui-gen2" href="#">Post an update</a>
+          
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          <script id="controlinit-4" type="text/javascript+initialized" class="li-control">
+                    
+      
+        
+        
+        /* extlib: _toggleclass */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-4', 'ToggleClass', {
+            classname: 'is-post-mode',
+            on: '#post-module',
+            stopEvent: true
+          });
+                  </script>
+              
+        
+          
+        
+            
+        
+        
+      
+      
+      
+      
+      
+    
+        </p>
+        
+        <div class="post-form">
+          
+            <span id="yui-gen3" class="postclose">[ <a href="#close">Close</a> ]</span>
+          
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          <script id="controlinit-5" type="text/javascript+initialized" class="li-control">
+                    
+      
+    
+            LI.Controls.addControl('control-5', 'ToggleClass', {
+            classname: 'is-post-mode',
+            on: '#post-module',
+            stopEvent: true
+          });
+                  </script>
+              
+        
+          
+        
+            
+        
+        
+      
+      
+      
+      
+      
+    
+          <h3>Post an update</h3>
+          
+            
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 
+ <form action="/share?submitPost=" method="POST" name="postModuleForm" gbpush="true" id="share-form" class="post">
+ 
+ 
+ 
+
+ <input value="false" name="ajax" id="share-ajax" type="hidden">
+
+ <input value="0" name="contentImageCount" id="share-img-total" type="hidden">
+ <input value="-1" name="contentImageIndex" id="share-img-selected-idx" type="hidden">
+ <input value="" name="contentImage" id="share-img-selected-url" type="hidden">
+ 
+ <input value="" name="contentEntityID" id="share-entity-id" type="hidden"> 
+ <input value="" name="contentUrl" id="share-entity-url" type="hidden"> 
+ 
+ 
+ <label style="display: none;" id="yui-gen4" for="postText-postModuleForm" class="ghost">Share an update </label>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-6" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _ghostlabel */
+ 
+ 
+ 
+ LI.Controls.addControl('control-6', 'GhostLabel', {});
+ </script>
+ 
+ 
+ <span class="error" id="postText-postModuleForm-error"></span>
+ 
+ 
+ <textarea name="postText" id="postText-postModuleForm" rows="2" cols="40" class="post-message hint">Share an update </textarea>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-7" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _sharepostmodule */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+LI.ShareUrlRegExTestB = /(?:(?:https?:\/\/(?:[A-Z0-9][A-Z0-9_\-]*\.)+[a-z]{2,4}|(?:[A-Z0-9][A-Z0-9_\-]*\.)+(?:com|edu|net|org))(?::(?:\d+))?)(?:\/[^\s]*)?/i;
+ 
+ 
+ LI.Controls.addControl('control-7', 'SharePostModule', {
+ getObjectURL: '/share?getPreview=&url=',
+ postModuleURL: '/nhome/postModule',
+ injectionMode: 'reload',
+ focusOnPageLoad: false,
+ urlRegEx: false
+ });
+ </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-8" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _checktextarea */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'CheckTextarea-error', 'You have exceeded the maximum length by <strong>{0}<\/strong> character(s).' );
+LI.i18n.register( 'CheckTextarea-empty',   'You may add up to <strong>{0}<\/strong> characters.' );
+LI.i18n.register( 'CheckTextarea-full', 'You may not add more characters.' );
+LI.i18n.register( 'CheckTextarea-countdown',   'You may add up to <strong>{0}<\/strong> more characters.' );
+LI.i18n.register( 'CheckTextarea-twitter-under', 'Count: <strong>{1}<\/strong>' );
+LI.i18n.register( 'CheckTextarea-twitter-over',   'Count: <strong>{1}<\/strong> (Only 140 characters will show on Twitter) ' );
+ 
+ 
+ LI.Controls.addControl('control-8', 'CheckTextarea', { 
+ maxLength: 600, 
+ grow: { onFocus: 35 },
+ useTwitterCountdown: 'post-cc-twitter'
+ });
+ </script>
+ 
+ 
+ 
+ <div id="share-mode" class="share-mode">
+ 
+ <div class="share-loading"></div>
+ 
+ <div id="share-view" class="share-view"></div>
+ 
+ <div class="share-edit">
+ <ul id="share-edit-list" class="form">
+ <li>
+ <input name="contentTitle" id="share-edit-title" class="text" maxlength="200" type="text">
+ </li>
+ <li id="share-edit-meta"></li>
+ <li>
+ <textarea name="contentSummary" id="share-edit-summary" class="text"></textarea>
+ </li>
+ <li id="share-include-photo-wrapper">
+ <input name="contentImageIncluded" value="true" id="share-include-photo" class="check" checked="checked" type="checkbox">
+ <label for="contentImageIncluded-postModuleForm">Include photo</label>
+ </li>
+ <li>
+ <input name="#" value="Preview" class="btn-primary" id="share-edit-submit" type="button">
+ or
+ <a href="#" id="share-edit-cancel">Cancel</a>
+ </li>
+ </ul> 
+ </div>
+ 
+ <div class="share-attach">
+ <a href="#" class="share-close share-close-attach">Close</a>
+ <h4>Add URL:</h4>
+ <p>
+ <input name="#" class="text" id="share-attach-input" type="input">
+ <input name="#" value="Attach" class="btn-primary" id="share-attach-link" type="button">
+ </p>
+ </div>
+ 
+ </div>
+ 
+ <div class="post-actions">
+ 
+ <div id="attach">
+ <a href="#">Attach a link</a>
+ </div>
+ 
+ <div class="settings" id="share-settings">
+ <p>visible to:</p> 
+ 
+ <div id="yui-gen5" class="menu-basic styled-dropdown">
+ <span class="label"> <span> anyone </span> </span><select name="postVisibility" id="postVisibility-postModuleForm">
+<option value="EVERYONE" selected="selected">anyone</option><option value="CONNECTIONS">connections only</option></select>
+ <ul class="drop">
+ <li class="separator"><a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Flearn%2Elinkedin%2Ecom%2Fthe-homepage%2F%23sharing&amp;urlhash=Kt1u" class="normal-link">Learn more »</a></li>
+ </ul>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-9" type="text/javascript+initialized" class="li-control">
+ 
+ 
+ LI.Controls.addControl('control-9', 'StyledDropdown', { listClass: 'drop' });
+ </script>
+ 
+ 
+ </div>
+ 
+ <div class="twitter">
+ <input name="tweet" value="tweet" id="post-cc-twitter" class="check" type="checkbox">
+ <select name="tetherAccountID" id="post-twit-account-select" class="twit-account-select">
+<option value="11133021" selected="selected">omarsehgal</option></select>
+ 
+ <div id="yui-gen6" class="twitlogo multi" title="Tweet this as omarsehgal">
+ <span class="hide">CC Twitter</span>
+ <ul id="post-twit-account-list" class="twit-account-list"><li><a href="#" class="selected twit-userID" title="Tweet this as omarsehgal" data-twit-id="11133021">omarsehgal</a></li><li class="separator"><a href="https://www.linkedin.com/secure/settings?twitterSettings=&amp;trk=spm_twit_setngs" class="edit">Twitter Settings</a></li></ul>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-10" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _nustweetstatus */
+ 
+ 
+ 
+ LI.Controls.addControl('control-10', 'NusTweetStatus', {
+ mode: 'multiple-accounts',
+ popupURL: 'https://www.linkedin.com/secure/tether?start=&provider=TWITTER&mini=&twitterSettings=upsell&twitterSettingsHideProfile=false&trk=spm_twit_add',
+ settingsURL: 'https://www.linkedin.com/secure/settings?twitterSettings=&trk=spm_twit_setngs',
+ selectId: 'post-twit-account-select',
+ ulId: 'post-twit-account-list',
+ i18n: {
+ editLinkText: 'Twitter Settings',
+ logoTooltip: 'Tweet this as omarsehgal'
+ }
+ });
+ </script>
+ 
+ 
+ </div> 
+ 
+ <div class="submit">
+ <input name="" value="Share" class="btn-primary" id="share-submit" type="submit">
+ </div>
+ 
+ </div>
+
+ 
+ 
+ 
+ 
+ <input name="submitPost" value="" id="submitPost-postModuleForm" type="hidden"><input name="csrfToken" value="ajax:4142211357854656029" id="csrfToken-postModuleForm" type="hidden"><input name="sourceAlias" value="0_bDL6Qg16XxC0mXAS8vUxbvElVv3wvoSqKhWatYABScj" id="sourceAlias-postModuleForm" type="hidden">
+ </form>
+ 
+ 
+ 
+
+          
+        </div>
+    
+      
+
+  
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    
+    
+
+
+</div>
+          </div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="section-title"> Overview </h2>
+<dl id="overview">
+  
+  
+  <dt class="summary-current" style="display: block;">
+    Current
+  </dt>
+  <dd class="summary-current" style="display: block;">
+    
+        <ul class="current">
+			    
+			      <li>
+              
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        Sr. Software Engineer
+      
+    
+    
+      <span class="at">at </span>
+      Intel
+    
+	
+
+
+
+
+
+
+
+			        
+		          <span class="edit">  <a href="http://www.linkedin.com/profile/edit-position?positionID=18677889&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this position">Edit</a> </span>
+			        
+			      </li>
+			    
+        </ul>
+		    
+		    
+			  
+			  
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+    <a class="add" name="addPosition" href="http://www.linkedin.com/profile/edit-position?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">
+	    
+	       + <strong>Add</strong> a current position
+	      
+    </a>
+  
+
+			  
+      
+  </dd>
+  
+
+  
+  
+  <dt class="summary-past" style="display: block;">
+    Past
+  </dt>
+  <dd class="summary-past" style="display: block;">
+    
+        <ul class="past">
+		    
+		      <li>
+		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        Software Developer
+      
+    
+    
+      <span class="at">at </span>
+      ALG
+    
+	
+
+
+
+
+
+
+
+		      </li>
+		    
+		      <li>
+		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        Software Developer
+      
+    
+    
+      <span class="at">at </span>
+      Bike-aLog
+    
+	
+
+
+
+
+
+
+
+		      </li>
+		    
+		      <li>
+		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        Technical Account/Production Specialist
+      
+    
+    
+      <span class="at">at </span>
+      Presenter, Inc
+    
+	
+
+
+
+
+
+
+
+		      </li>
+		    
+		    </ul>
+		    
+        
+        
+        
+      
+  </dd>
+  
+
+  
+  
+    <dt class="summary-education" style="display: block;">
+       Education
+    </dt>
+    <dd class="summary-education" style="display: block;">
+      
+		      <ul>
+		        
+              
+ 		          <li>
+	              University of California, Santa Barbara
+		          </li>
+		          
+		        
+              
+		          
+		        
+		      </ul>
+		      
+		      
+		      
+        
+    </dd>
+  
+  
+  
+  
+    <dt>
+       Recommendations
+    </dt>
+    <dd>
+      <p>
+        
+            
+                 <a href="#profile-recommendations"><strong name="endorsedyoucount">12</strong> recommendations</a>
+                 <span class="edit"> <a href="http://www.linkedin.com/references">Edit</a> </span>
+              
+          
+      </p>
+    </dd>
+  
+
+  
+  
+    
+    <dt>
+      Connections
+    </dt>
+    <dd class="overview-connections">
+      <p>
+      
+          
+        <a href="http://www.linkedin.com/profile?viewConns=&amp;key=13342126&amp;goback=%2Enpe_*1_*1_*1_*1" name="profsum"><strong>207</strong> connections</a>
+            
+      
+      </p>
+    </dd>
+    
+  
+
+  
+  
+  
+    <dt class="websites">Websites</dt>
+    <dd class="websites">
+      
+	          <p class="none"><a class="add" href="http://www.linkedin.com/profile/edit-additional-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong> a website</a></p>
+	      
+    </dd>
+  
+  
+  
+    
+  
+  
+    <dt>
+    	Twitter
+    </dt>
+    <dd>
+        
+		        
+		          <p>
+		            <a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Etwitter%2Ecom%2Fomarsehgal&amp;urlhash=j7Qv&amp;trk=pro_twit" target="_blank">omarsehgal</a>
+		            
+		              <span class="edit">
+		                
+		                <a href="https://www.linkedin.com/secure/settings?twitterSettings=&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a>
+		              </span>
+	              
+		          </p>
+		        
+            
+      </dd>
+  
+    
+
+  
+  
+    
+   <dt>Public Profile</dt>
+    <dd class="last">
+      <p class="url">
+        
+            <a href="http://www.linkedin.com/in/omarsehgal" title="View public profile" name="webProfileURL">http://www.linkedin.com/in/omarsehgal</a>
+          
+        
+        
+          <span class="edit">  <a href="http://www.linkedin.com/myprofile?editwp=&amp;locale=en_US">Edit</a> </span>        
+        
+        
+      </p>
+      </dd>
+    
+  
+  
+  
+  
+    
+  
+</dl>
+
+<script type="text/javascript">
+  showHide.init('overview');
+</script>
+
+
+
+
+
+
+
+
+
+          
+            <div class="profile-actions-tertiary-container">
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+  
+      
+  
+      
+  
+      
+  
+      
+
+      
+      
+
+
+
+<ul class="profile-actions-tertiary has-3">
+        <li class="share">
+          <a href="http://www.linkedin.com/forwardProfileMsg?displayCreate=&amp;profileID=13342126&amp;profileName=Omar+Sehgal&amp;network=M&amp;authToken=u5q0&amp;authType=name&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=prof-0-ab-share-0">
+            <span>Share</span>
+          </a>
+        </li>
+        <li class="pdf">
+              <a href="http://www.linkedin.com/profile/pdf?id=13342126&amp;locale=en_US&amp;authType=name&amp;authToken=u5q0&amp;pdfFileName=OmarSehgal&amp;disablePdfCompression=true&amp;trk=pdf_pro_full" title="Download as PDF">
+            <span>PDF</span>
+          </a>
+        </li>
+        <li class="print">
+          <a href="javascript:window.print();" title="Print Profile">
+            <span>Print</span>
+          </a>
+        </li>
+</ul>
+            </div>
+          
+        </div>
+          <div class="add-sections">
+            <h2>
+              <span class="new">NEW</span> 
+              <strong>Add sections</strong> to reflect achievements and experiences on your profile.
+            </h2>
+                  
+                    <a id="yui-gen7" class="add" href="http://www.linkedin.com/profile/add-profile-section?goback=%2Enpe_*1_*1_*1_*1">Add sections</a>
+                  
+      
+      
+      
+      
+          <script id="controlinit-11" type="text/javascript+initialized" class="li-control">
+                    
+        /* extlib: _dialog */
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'Dialog-closeWindow', 'Close this window' );
+LI.i18n.register( 'Dialog-or',   'or' );
+LI.i18n.register( 'Dialog-cancel', 'Cancel' );
+LI.i18n.register( 'Dialog-submit',   'Submit' );
+LI.i18n.register( 'Dialog-error-generic',   'We\'re sorry. Something unexpected happened and your request could not be completed. Please try again.' );
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+  
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+LI.ComposeDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://static01.linkedin.com/scds/concat/common/js?h=a1qcfld6rclqcxobdl96wei6s"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=b6a15x3mhw53jqxn6h8454h8x"]
+              
+            
+          
+        
+      
+    
+};
+
+LI.FeedbackDialogDependencies = {
+  url: '/lite/feedback-form',
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=dfeel1pw0g1k0i02ad5s9qpve"]
+              
+            
+          
+        
+      
+    
+};
+
+LI.WhoSharedDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://static01.linkedin.com/scds/concat/common/js?h=d75r0d3v3wnz162gsnfx3jalf-1mxovmzyj16fqqini1y9aio4c-4mdnhz5oidl95blrmjxaw7815-7kikx4cof8m5xywfppkzcv0gx-dpd1zk8wo0d626juzinrxcaxh-a4vb3naxqpmnt35pswe1bh9f6"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=1z88mn84qz9i0wwqc56umb2yh-f0d6obb5jo8x5ff7g5f3w99ln-6p48z49pi4sggv71v0l8tblx9-9657npvuqlf5ozaxhw1ktiihn"]
+              
+            
+          
+        
+      
+    
+};
+        
+    
+            LI.Controls.addControl('control-11', 'Dialog', {
+                     name: 'addNewSections',
+                     type: 'interrupt',
+                     width: 800,
+                     className: 'adding-sections',
+                     content: { 
+                       url: '/profile/add-profile-section-modal?goback=%2Enpe_*1_*1_*1_*1', 
+                       title: 'Add Sections' 
+                     }
+                   });
+                  </script>
+        
+    
+              
+          </div>
+        
+         <div id="yui-gen16" class="resume">
+           
+      
+        <form action="/profile/section-reorder-submit" method="POST" name="sectionReorderForm">
+       
+       
+    
+               <input name="sectionOrder" value="" id="sectionOrder-sectionReorderForm" type="hidden">
+           
+      
+      
+          
+          <input name="locale" value="" id="locale-sectionReorderForm" type="hidden"><input name="nudgeID" value="" id="nudgeID-sectionReorderForm" type="hidden"><input name="timestamp" value="0" id="timestamp-sectionReorderForm" type="hidden"><input name="sectionOrder" value="" id="sectionOrder-sectionReorderForm" type="hidden"><input name="csrfToken" value="ajax:4142211357854656029" id="csrfToken-sectionReorderForm" type="hidden"><input name="sourceAlias" value="0_bDL6Qg16XxC0mXAS8vUxbvElVv3wvoSqKhWatYABScj" id="sourceAlias-sectionReorderForm" type="hidden"><input name="goback" value=".npe_*1_*1_*1_*1" id="goback-sectionReorderForm" type="hidden">
+          </form>
+        </div></body></html>
+      
+    
+                 
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

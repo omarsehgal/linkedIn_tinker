@@ -1,0 +1,8685 @@
+<!DOCTYPE HTML>
+<html lang="en"><head> 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ <script type="text/javascript">
+ if (!window.i18n) { window.i18n = {}; }
+
+ // global webtrack object for timing information
+ var WEBTRACK_GLOBAL = {
+ softTimings: {},
+ hardTimings: {},
+ seedTime: null,
+ now: function() { return (new Date()).getTime(); },
+ lapse: function() { return this.now() - this.seedTime; },
+ get: function(name) { return (this.hardTimings[name]) ? this.hardTimings[name] : this.softTimings[name]; },
+ getSoftTimings: function() { return this.softTimings; },
+ set: function(name, val) { this.hardTimings[name] = (val*-1 > 0) ? null : val*1; },
+ record: function(name) { this.softTimings[name] = this.now(); },
+ clean: function() {} // FIXME
+ };
+ WEBTRACK_GLOBAL.seedTime = WEBTRACK_GLOBAL.now();
+ </script>
+
+ 
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=9">
+ <meta name="pageImpressionID" content="f527acfe-033d-464c-9d0b-fdd745a9321c">
+ <meta name="pageKey" content="nprofile-edit-success">
+ <meta name="analyticsURL" content="/analytics/noauthtracker">
+ <link rel="openid.server" href="https://www.linkedin.com/uas/openid/authorize">
+ <link rel="apple-touch-icon-precomposed" href="http://www.linkedin.com/img/icon/apple-touch-icon.png">
+ <!--[if (!IE)|(lt IE 9)]-->
+ <link rel="shortcut icon" type="image/ico" href="http://static01.linkedin.com/scds/common/u/img/favicon_v3.ico">
+ <!--[endif]-->
+ <!--[if gte IE 9]>
+ <link rel="shortcut icon" type="image/ico" href="http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico">
+ <meta name="msapplication-task" content="name=Home;action-uri=/home?trk=ie_sm_home;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <meta name="msapplication-task" content="name=My Inbox;action-uri=/inbox/messages/received?trk=ie_sm_inbox;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <meta name="msapplication-task" content="name=My Profile;action-uri=/myprofile?trk=ie_sm_pro;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <meta name="msapplication-task" content="name=My Connections;action-uri=/connections?trk=ie_sm_cnts;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <meta name="msapplication-task" content="name=My Groups;action-uri=/myGroups?trk=ie_sm_grps;icon-uri=http://static01.linkedin.com/scds/common/u/img/favicon_ie9.ico"/>
+ <![endif]-->
+ 
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('preGlobalHeadCSS');
+ }
+ </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <link rel="stylesheet" type="text/css" href="edit_files/css.css">
+ 
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('postGlobalHeadCSS');
+ }
+ </script>
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('preGlobalHeadJS');
+ }
+ </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript" src="edit_files/js_002"></script>
+ 
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('postGlobalHeadJS');
+ }
+ </script>
+ 
+ 
+<link rel="stylesheet" type="text/css" href="edit_files/css_002.css">
+                  
+                
+              
+          
+        
+      
+    
+
+      
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+                  
+                    <script type="text/javascript" src="edit_files/js"></script>
+                  
+                  
+                
+              
+          
+        
+      
+    
+      <script type="text/javascript">document.cookie='lang="v=2&lang=en&c="; expires=-1; domain=linkedin.com; version=0; path=/;';</script><title>Edit Profile | LinkedIn</title>
+  
+      
+    
+	
+      
+    
+      
+    
+
+      
+    
+      
+    
+      
+    
+      
+    
+
+      
+      
+      
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+<script type="text/javascript">
+ 
+ /* extlib: _styleddropdown */
+ 
+ 
+ 
+ LI.Controls.addControl('control-1', 'StyledDropdown', { name: 'universal-search-selector', align: 'right' });
+ 
+
+ 
+ /* extlib: _universalsearch */
+ LI.i18n.register( 'universal-search-connections', 'Connections' );
+LI.i18n.register( 'universal-search-companies', 'Companies' );
+LI.i18n.register( 'universal-search-groups', 'Groups' );
+LI.i18n.register( 'universal-search-features', 'Features' );
+LI.i18n.register( 'universal-search-skills', 'Skills' );
+LI.i18n.register( 'universal-search-skill', 'Skill' );
+LI.i18n.register( 'universal-search-polls', 'Polls' );
+LI.i18n.register( 'universal-search-polls-pro', '<strong>Poll<\/strong> LinkedIn Professionals' );
+
+ 
+ 
+ LI.Controls.addControl('control-2', 'UniversalSearch', {
+ field: "main-search-box",
+ user_id: 13342126,
+ userProfileImage: "http://media02.linkedin.com/mpr/mpr/shrink_40_40/p/3/000/001/08d/21820f5.jpg",
+ pollsAvatar: "http://static02.linkedin.com/scds/common/u/img/icon/icon_q_30x30.gif",
+ pollsLink: "/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=1900&amp;_applicationId=1900&amp;_ownerId=0&amp;osUrlHash=E3TZ",
+ pollsTriggerWords: "what,where,how,who,when,why,which,are,arent,aren't,can,cant,can't,could,couldnt,couldn't,do,does,doesnt,doesn't,dont,don't,had,hadnt,hadn't,has,hasnt,hasn't,have,havent,haven't,hows,how's,if,is,isnt,isn't,should,shouldnt,shouldn't,whats,what's,whens,when's,wheres,where's,whom,whos,who's,whose,whys,why's,wont,won't,would,wouldnt,wouldn't",
+ searchTypeMenu: "main-search-category",
+ leoTypeaheadRoot: "/typeahead",
+ enableTypeahead: true,
+ searchLink: "search-link",
+ loadingImgSrc: "http://static01.linkedin.com/scds/common/u/img/anim/anim_loading_16x16.gif",
+ typeaheadABTest: "NOTC",
+ matching: "standard"
+ });
+ 
+
+ 
+ /* extlib: _navigationmenu */
+ 
+ 
+ 
+ LI.Controls.addControl('control-3', 'NavigationMenu', { 
+ remoteMenus : {
+ inbox : {
+ id : 'nav-primary-inbox',
+ url : (/^https/.test(window.location.href)) ? '' : '\/inbox\/summary',
+ css : LI.InboxNav.Styles,
+ js : LI.InboxNav.Scripts
+ },
+ company : {
+ id : 'nav-primary-company',
+ url : '/company/chrome/nav'
+ }
+ }
+ });
+ </script><script type="text/javascript">
+                    
+      
+        
+        
+        /* extlib: _toggleclass */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-4', 'ToggleClass', {
+            classname: 'is-post-mode',
+            on: '#post-module',
+            stopEvent: true
+          });
+                  
+
+                    
+      
+    
+            LI.Controls.addControl('control-5', 'ToggleClass', {
+            classname: 'is-post-mode',
+            on: '#post-module',
+            stopEvent: true
+          });
+                  
+
+ 
+ /* extlib: _ghostlabel */
+ 
+ 
+ 
+ LI.Controls.addControl('control-6', 'GhostLabel', {});
+ 
+
+ 
+ /* extlib: _sharepostmodule */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+LI.ShareUrlRegExTestB = /(?:(?:https?:\/\/(?:[A-Z0-9][A-Z0-9_\-]*\.)+[a-z]{2,4}|(?:[A-Z0-9][A-Z0-9_\-]*\.)+(?:com|edu|net|org))(?::(?:\d+))?)(?:\/[^\s]*)?/i;
+ 
+ 
+ LI.Controls.addControl('control-7', 'SharePostModule', {
+ getObjectURL: '/share?getPreview=&url=',
+ postModuleURL: '/nhome/postModule',
+ injectionMode: 'reload',
+ focusOnPageLoad: false,
+ urlRegEx: false
+ });
+ 
+
+ 
+ /* extlib: _checktextarea */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'CheckTextarea-error', 'You have exceeded the maximum length by <strong>{0}<\/strong> character(s).' );
+LI.i18n.register( 'CheckTextarea-empty',   'You may add up to <strong>{0}<\/strong> characters.' );
+LI.i18n.register( 'CheckTextarea-full', 'You may not add more characters.' );
+LI.i18n.register( 'CheckTextarea-countdown',   'You may add up to <strong>{0}<\/strong> more characters.' );
+LI.i18n.register( 'CheckTextarea-twitter-under', 'Count: <strong>{1}<\/strong>' );
+LI.i18n.register( 'CheckTextarea-twitter-over',   'Count: <strong>{1}<\/strong> (Only 140 characters will show on Twitter) ' );
+ 
+ 
+ LI.Controls.addControl('control-8', 'CheckTextarea', { 
+ maxLength: 600, 
+ grow: { onFocus: 35 },
+ useTwitterCountdown: 'post-cc-twitter'
+ });
+ 
+
+ 
+ 
+ LI.Controls.addControl('control-9', 'StyledDropdown', { listClass: 'drop' });
+ 
+
+ 
+ /* extlib: _nustweetstatus */
+ 
+ 
+ 
+ LI.Controls.addControl('control-10', 'NusTweetStatus', {
+ mode: 'multiple-accounts',
+ popupURL: 'https://www.linkedin.com/secure/tether?start=&provider=TWITTER&mini=&twitterSettings=upsell&twitterSettingsHideProfile=false&trk=spm_twit_add',
+ settingsURL: 'https://www.linkedin.com/secure/settings?twitterSettings=&trk=spm_twit_setngs',
+ selectId: 'post-twit-account-select',
+ ulId: 'post-twit-account-list',
+ i18n: {
+ editLinkText: 'Twitter Settings',
+ logoTooltip: 'Tweet this as omarsehgal'
+ }
+ });
+ 
+
+                    
+        /* extlib: _dialog */
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'Dialog-closeWindow', 'Close this window' );
+LI.i18n.register( 'Dialog-or',   'or' );
+LI.i18n.register( 'Dialog-cancel', 'Cancel' );
+LI.i18n.register( 'Dialog-submit',   'Submit' );
+LI.i18n.register( 'Dialog-error-generic',   'We\'re sorry. Something unexpected happened and your request could not be completed. Please try again.' );
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+  
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+LI.ComposeDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://static01.linkedin.com/scds/concat/common/js?h=a1qcfld6rclqcxobdl96wei6s"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=b6a15x3mhw53jqxn6h8454h8x"]
+              
+            
+          
+        
+      
+    
+};
+
+LI.FeedbackDialogDependencies = {
+  url: '/lite/feedback-form',
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=dfeel1pw0g1k0i02ad5s9qpve"]
+              
+            
+          
+        
+      
+    
+};
+
+LI.WhoSharedDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://static01.linkedin.com/scds/concat/common/js?h=d75r0d3v3wnz162gsnfx3jalf-1mxovmzyj16fqqini1y9aio4c-4mdnhz5oidl95blrmjxaw7815-7kikx4cof8m5xywfppkzcv0gx-dpd1zk8wo0d626juzinrxcaxh-a4vb3naxqpmnt35pswe1bh9f6"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=1z88mn84qz9i0wwqc56umb2yh-f0d6obb5jo8x5ff7g5f3w99ln-6p48z49pi4sggv71v0l8tblx9-9657npvuqlf5ozaxhw1ktiihn"]
+              
+            
+          
+        
+      
+    
+};
+        
+    
+            LI.Controls.addControl('control-11', 'Dialog', {
+                     name: 'addNewSections',
+                     type: 'interrupt',
+                     width: 800,
+                     className: 'adding-sections',
+                     content: { 
+                       url: '/profile/add-profile-section-modal?goback=%2Enpe_*1_*1_*1_*1', 
+                       title: 'Add Sections' 
+                     }
+                   });
+                  
+
+                    
+        /* extlib: _sortable_section */
+          
+        
+    
+            LI.Controls.addControl('control-12', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'SUM',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-13', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'APP',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-14', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'EXP',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-15', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'EDU',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-16', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'REC',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-17', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'ADD',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-18', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'PER',
+                    group: 'profile'
+                  });
+                  
+
+                    
+    
+            LI.Controls.addControl('control-19', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'CON',
+                    group: 'profile'
+                  });
+                  
+
+                    
+        /* extlib: _sortable_region */
+          
+        
+    
+            LI.Controls.addControl('control-20', 'Sortable.Region', {
+            constants: 'LI.Profile.Constants',
+            onCreatePostData: LI.Profile.SortableSection.onCreatePostData,
+            helpText: 'Drag to rearrange profile sections',
+            group: 'profile',
+            useForm: 'form',
+            createPostDataConfig: {
+              orderInputId: 'sectionOrder-sectionReorderForm'
+            },
+            onSuccess: function(o) {
+             
+              YDom.get('timestamp-sectionReorderForm').value=o.responseText.timestamp;
+            }
+          });
+                  
+
+                    
+      
+    
+            LI.Controls.addControl('control-21', 'Dialog', {
+            name: 'uploadResumeDialog',
+            type: 'task-modless',
+            content: { 
+              node: 'upload-resume', 
+              title: '<strong>Import your r&eacute;sum&eacute; <\/strong>' 
+            }
+          });
+                  
+
+                    
+      
+        
+        
+        /* extlib: _profileresumeimportdialog */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-22', 'ProfileResumeImportDialog', {});
+                  
+
+                    
+      
+        
+        
+        /* extlib: _nusdeleteupdate */
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'NusDeleteUpdate-are-you', 'Are you sure you want to delete this update?' );
+LI.i18n.register( 'NusDeleteUpdate-yes',   'Yes, please delete it' );
+LI.i18n.register( 'NusDeleteUpdate-or', 'or' );
+LI.i18n.register( 'NusDeleteUpdate-cancel',   'Cancel' );
+LI.i18n.register( 'NusDeleteUpdate-please-confirm',   'Please Confirm' );
+
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-23', 'NusDeleteUpdate', {});
+                  
+
+                    
+      
+        
+        
+        /* extlib: _nusliking */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-24', 'NusLiking', {});
+                  </script><script type="text/javascript">
+ 
+ 
+ LI.Controls.setInitialized(YDom.get('control-25'));
+ </script><script src="edit_files/quant.js" type="text/javascript" id="yui__dyn_0"></script><script src="edit_files/beacon.js" type="text/javascript" id="yui__dyn_1"></script></head><body class="en member v2 edit-my-profile js " id="pagekey-nprofile-edit-success"><div style="position: absolute; visibility: hidden; cursor: move; border: 2px solid rgb(170, 170, 170); z-index: 999; height: 25px; width: 25px;" id="ygddfdiv"><div style="height: 100%; width: 100%; background-color: rgb(204, 204, 204); opacity: 0;"></div></div><div id="universal-typeahead-results" class="typeahead-results-container yui-ac-container"><div style="display: none;" class="yui-ac-content"><div style="display: none;" class="yui-ac-hd"></div><div class="yui-ac-bd"><ul><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li></ul></div><div style="display: none;" class="yui-ac-ft"></div></div></div>
+
+ 
+<script type="text/javascript">document.body.className += " js " /*@cc_on+'ie'+ScriptEngineMinorVersion()@*/;</script>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+ LI.define( 'InboxNav.Styles' );
+ LI.InboxNav.Styles = 
+ ["http://static01.linkedin.com/scds/concat/common/css?h=4rkktcgkvi2tx64prc0r9rp5b"]
+ ;
+ LI.define( 'InboxNav.Scripts' );
+ LI.InboxNav.Scripts = 
+ ["http://static01.linkedin.com/scds/concat/common/js?h=em1445ff7g1bpi7y8m5y0fje5-aaod7sf2exa7qhhbzubedjht1-64fe72oeb6wavykgur2dpdkrp-8yquvi1k1eb17i0yytgzcszxl-af6eo1jj5h8jrywnsai6zvjla-4yixzol6l99mn6u96dseifu73-5lheixnrmned0v6r9szhepzfx-7jj4yp05oyyfdlbn17ncvfrbx"]
+ ;
+ </script>
+
+ 
+ <div id="header" class="global-nav member">
+ <div class="wrapper">
+ 
+ <ul class="util">
+ <li class="tab"> 
+ <a href="http://www.linkedin.com/profile/edit?trk=h-gnav-name-link-0" class="username"> 
+Omar Sehgal </a> 
+ <ul class="menu">
+ <li>
+ <a href="http://www.linkedin.com/profile/edit?trk=tab_pro" class="username">
+Omar Sehgal </a>
+ </li>
+ <li id="nav-utility-acct"><a href="https://www.linkedin.com/secure/settings?trk=hb_acc">Settings</a></li>
+ <li id="nav-utility-auth"><a href="https://www.linkedin.com/secure/login?session_full_logout=&amp;trk=hb_signout">Sign Out</a></li>
+ </ul>
+ </li>
+ <li class="jump"><a href="#main">Skip to Content</a></li>
+ <li class="jump"><a href="#global-search">Search</a></li>
+ <li><a href="https://www.linkedin.com/secure/importAndInvite?trk=hb_add_conn" class="add-conx"><strong>Add Connections</strong></a></li>
+ <li class="signout"><a href="https://www.linkedin.com/secure/settings?trk=hb_acc">Settings</a></li>
+ <li class="signout"><a href="https://www.linkedin.com/secure/login?session_full_logout=&amp;trk=hb_signout">Sign Out</a></li>
+ </ul>
+ 
+ <script type="text/javascript">
+ if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+ {
+ WEBTRACK_GLOBAL.record('clientTimeToFirstPixel');
+ }
+ </script> 
+ 
+ <h1 class="logo"><a href="http://www.linkedin.com/?trk=hb-0-h-logo" title="Home"> LinkedIn</a></h1>
+ 
+ <div class="account">
+ <a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;_pt=sub&amp;trk=home_level">
+ Account Type: Basic
+ </a>
+ </div>
+ </div>
+ 
+ <div class="bar">
+ <div class="wrapper">
+ 
+ <ul class="nav">
+ <li id="nav-primary-home" class="tab">
+ <a href="http://www.linkedin.com/home?trk=hb_tab_home_top"><span>Home</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/home?trk=hb_tab_home">LinkedIn Home</a></li>
+ <li>
+ <a href="http://www.linkedin.com/advertising?src=en-all-el-li-hb_tab_ads&amp;utm_medium=el&amp;utm_source=li&amp;utm_campaign=hb_tab_ads&amp;trk=hb_tab_ads">Advertise on Linkedin</a>
+ </li> 
+ </ul>
+ </li>
+ <li id="nav-primary-profile" class="tab">
+ <a href="http://www.linkedin.com/profile/edit?trk=hb_tab_pro_top"><span>Profile</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/profile/edit?trk=tab_pro">Edit Profile</a></li>
+ <li><a href="http://www.linkedin.com/profile/view?id=13342126&amp;trk=tab_pro">View Profile</a></li>
+ <li><a href="http://www.linkedin.com/references?mrs=">Recommendations</a></li>
+ <li><a href="http://www.linkedin.com/organizer?trk=hb_tab_organizer">Profile Organizer</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-contacts" class="tab">
+ <a href="http://www.linkedin.com/connections?trk=hb_tab_cnts_top"><span>Contacts</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/connections?trk=hb_tab_connections">My Connections</a></li>
+ <li><a href="https://www.linkedin.com/secure/importAndInvite?trk=hb_add_conn">Add Connections</a></li>
+ <li><a href="http://www.linkedin.com/network?trk=hb_tab_net">Network Statistics</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-groups" class="tab">
+ <a href="http://www.linkedin.com/myGroups?trk=hb_side_grps_top"><span>Groups</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/myGroups?trk=hb_side_mygrps">Your Groups</a></li>
+ <li><a href="http://www.linkedin.com/groupsDirectory?recommendations=&amp;trk=hb_side_gyml">Groups You May Like</a></li>
+ <li><a href="http://www.linkedin.com/groupsDirectory?trk=hb_side_grpsdir">Groups Directory</a></li>
+ <li><a href="http://www.linkedin.com/createGroup?displayCreate=&amp;trk=hb_side_crgrp">Create a Group</a></li>
+ <li class="user-group separator"><a href="http://www.linkedin.com/groups?gid=3852152&amp;trk=hb_side_g">Internet Advertising Class Spring 2011, Stanford</a></li>
+ <li class="user-group"><a href="http://www.linkedin.com/groups?gid=92146&amp;trk=hb_side_g">Returning Indians - NRI's, Returned Indians &amp; Expatriates</a></li>
+ <li class="user-group"><a href="http://www.linkedin.com/groups?gid=22413&amp;trk=hb_side_g">Ruby on Rails</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-jobs" class="tab">
+ <a href="http://www.linkedin.com/jobs?displayHome=&amp;trk=hb_tab_jobs_top"><span>Jobs</span></a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/jobs?displayHome=&amp;trk=hb_tab_findjobs">Find Jobs</a></li>
+ <li>
+ <a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;ups=jobseeker&amp;_pt=sub&amp;trk=hb_tab_jss">Job Seeker Premium</a>
+ </li>
+ <li><a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;ups=hiring&amp;_pt=sub&amp;trk=lnl_job_nav">Find Talent</a></li>
+ <li class="separator"><a href="http://www.linkedin.com/hiring?editAttributes=&amp;trk=hb_tab_postjob">Post a Job</a></li>
+ <li><a href="http://www.linkedin.com/hiring?manageActives=&amp;trk=hb_tab_mngjob">Manage Jobs</a></li>
+ <li><a href="http://www.linkedin.com/hiring?trk=hb_tab_hire">Hiring Solutions</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-inbox" class="tab">
+ <a href="http://www.linkedin.com/inbox/messages/received?trk=hb_tab_inbox_top">
+ <span>
+ Inbox
+ </span>
+ </a>
+ <ul class="menu">
+ <li><a href="http://www.linkedin.com/inbox/invitations/pending">Accept Invitations</a></li>
+ <li>
+ <a href="http://www.linkedin.com/inbox/messages/received?trk=hd_tab_received">
+ View Messages
+ </a>
+ </li>
+ <li><a href="http://www.linkedin.com/msgToConns?displayCreate=&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=hb_tab_cmpmsg">Compose Message</a></li>
+ <li class="separator"><a href="http://www.linkedin.com/inbox/messages/received?trk=hd_tab_received">Inbox</a></li> 
+ <li><a href="http://www.linkedin.com/inbox/messages/sent?trk=hd_tab_sent">Sent</a></li>
+ <li><a href="http://www.linkedin.com/inbox/messages/archive?trk=hd_tab_archive">Archived</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-company" class="tab">
+ <a href="http://www.linkedin.com/companies?trk=hb_tab_compy"><span>Companies</span></a>
+ <ul id="nav-primary-companies-menu" class="menu">
+ <li><a href="http://www.linkedin.com/companies?trk=hb_tab_compy">Find Companies</a></li>
+ <li><a href="http://www.linkedin.com/companies?dspFllwed=&amp;trk=hb_tab_compy_flw">Companies You Follow</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-news" class="tab">
+ <a href="http://www.linkedin.com/today/?trk=hb_tab_news"><span>News</span></a>
+ <ul id="nav-primary-companies-menu" class="menu">
+ <li><a href="http://www.linkedin.com/today/?trk=hb_tab_to">LinkedIn Today</a></li>
+ <li><a href="http://www.linkedin.com/today/saved?trk=hb_tab_svd">Saved Articles</a></li>
+ <li><a href="http://www.linkedin.com/signal/?trk=hb_tab_sgnl">Signal</a></li>
+ </ul>
+ </li>
+ <li id="nav-primary-more" class="tab">
+ <a href="#nav-primary-more-menu"><span>More</span></a>
+ <ul id="nav-primary-more-menu" class="menu">
+ <li><a href="http://www.linkedin.com/answers?trk=hb_tab_ayn">Answers</a></li>
+ <li><a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Flearn%2Elinkedin%2Ecom%2F&amp;urlhash=YK4z">Learning Center</a></li>
+ <li><a href="http://www.linkedin.com/skills/?trk=skills-global-nav">Skills <sup class="icon-beta">beta</sup></a></li>
+ <li><a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;_pt=sub&amp;trk=nav_more_end_middle">Upgrade My Account</a></li>
+ <li id="nav-my-apps" class="separator"><span class="title">My Applications</span>
+ <ul>
+ <li>
+ <a href="http://www.linkedin.com/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=20&amp;_applicationId=1700&amp;_ownerId=13342126&amp;osUrlHash=mZnA&amp;trk=hb_side_apps" name="bar">Reading List by Amazon</a>
+ </li>
+ <li>
+ <a href="http://www.linkedin.com/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=30&amp;_applicationId=2000&amp;_ownerId=13342126&amp;osUrlHash=j7bB&amp;trk=hb_side_apps" name="bar">Events</a>
+ </li>
+ <li>
+ <a href="http://www.linkedin.com/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=80&amp;_applicationId=1900&amp;_ownerId=13342126&amp;osUrlHash=o9xM&amp;trk=hb_side_apps" name="bar">Polls</a>
+ </li>
+ <li><a href="http://www.linkedin.com/static?key=application_directory&amp;trk=hb_side_apps">Get More Applications...</a></li>
+ </ul>
+ </li>
+ </ul>
+ </li>
+ </ul>
+ 
+ 
+ <form id="global-search" action="/search/fpsearch" method="get" accept-charset="UTF-8" name="commonSearch" class="global-search">
+ <fieldset>
+ <legend><span>Find People, Jobs, Answers, and More</span></legend>
+ <label for="main-search-category">Search for:</label>
+ 
+ <div id="yui-gen1" class="search-scope styled-dropdown">
+ <span class="label"> <span> People </span> </span><select name="type" id="main-search-category" class="search-category">
+ 
+ <option selected="selected" class="/search?trk=advsrch" data-li-search-action="/search/fpsearch" title="Keyword, name, company or title" value="people">People</option>
+
+ <option data-li-search-action="/signal/" title="Keyword, company or job title" value="updates">Updates</option>
+
+ <option class="/jobs?search=&amp;trk=hb_advjs" data-li-search-action="/jsearch" title="Keyword, company or job title" value="jobs">Jobs</option>
+ 
+ <option data-li-search-action="/csearch/results" title="Keyword" value="companies">Companies</option>
+ 
+ <option class="/searchAnswers?search=&amp;trk=advsrch" title="Keyword" value="answers">Answers</option>
+ 
+ <option title="Keyword" value="inbox">Inbox</option>
+ 
+ <option title="Keyword" value="groups">Groups</option>
+ </select>
+ 
+ <ul>
+ <li class="separator suggestion-toggle state-on">
+ <div>
+ <span class="off-toggle">Turn off suggestions</span>
+ <span class="on-toggle">Turn on suggestions</span>
+ </div>
+ </li>
+ </ul>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-1" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _styleddropdown */
+ 
+ 
+ 
+ LI.Controls.addControl('control-1', 'StyledDropdown', { name: 'universal-search-selector', align: 'right' });
+ </script>
+ 
+ 
+ <span id="search-autocomplete-container" title="Tip: You can also search by keyword, company, school..." class="/typeahead">
+ <input name="keywords" id="main-search-box" class="search-term yui-ac-input" autocomplete="off" type="text">
+ <input name="pplSearchOrigin" value="GLHD" type="hidden">
+ <input name="pageKey" value="nprofile-edit-success" type="hidden">
+ <span id="search-typeahead-container"></span>
+ </span>
+ <input name="search" value="Search" class="search-go" type="submit">
+ </fieldset>
+ 
+ <a id="search-link" href="http://www.linkedin.com/search?trk=advsrch">Advanced</a>
+ 
+ </form>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-2" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _universalsearch */
+ LI.i18n.register( 'universal-search-connections', 'Connections' );
+LI.i18n.register( 'universal-search-companies', 'Companies' );
+LI.i18n.register( 'universal-search-groups', 'Groups' );
+LI.i18n.register( 'universal-search-features', 'Features' );
+LI.i18n.register( 'universal-search-skills', 'Skills' );
+LI.i18n.register( 'universal-search-skill', 'Skill' );
+LI.i18n.register( 'universal-search-polls', 'Polls' );
+LI.i18n.register( 'universal-search-polls-pro', '<strong>Poll<\/strong> LinkedIn Professionals' );
+
+ 
+ 
+ LI.Controls.addControl('control-2', 'UniversalSearch', {
+ field: "main-search-box",
+ user_id: 13342126,
+ userProfileImage: "http://media02.linkedin.com/mpr/mpr/shrink_40_40/p/3/000/001/08d/21820f5.jpg",
+ pollsAvatar: "http://static02.linkedin.com/scds/common/u/img/icon/icon_q_30x30.gif",
+ pollsLink: "/osview/canvas?_ch_page_id=1&amp;_ch_panel_id=1&amp;_ch_app_id=1900&amp;_applicationId=1900&amp;_ownerId=0&amp;osUrlHash=E3TZ",
+ pollsTriggerWords: "what,where,how,who,when,why,which,are,arent,aren't,can,cant,can't,could,couldnt,couldn't,do,does,doesnt,doesn't,dont,don't,had,hadnt,hadn't,has,hasnt,hasn't,have,havent,haven't,hows,how's,if,is,isnt,isn't,should,shouldnt,shouldn't,whats,what's,whens,when's,wheres,where's,whom,whos,who's,whose,whys,why's,wont,won't,would,wouldnt,wouldn't",
+ searchTypeMenu: "main-search-category",
+ leoTypeaheadRoot: "/typeahead",
+ enableTypeahead: true,
+ searchLink: "search-link",
+ loadingImgSrc: "http://static01.linkedin.com/scds/common/u/img/anim/anim_loading_16x16.gif",
+ typeaheadABTest: "NOTC",
+ matching: "standard"
+ });
+ </script>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-3" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _navigationmenu */
+ 
+ 
+ 
+ LI.Controls.addControl('control-3', 'NavigationMenu', { 
+ remoteMenus : {
+ inbox : {
+ id : 'nav-primary-inbox',
+ url : (/^https/.test(window.location.href)) ? '' : '\/inbox\/summary',
+ css : LI.InboxNav.Styles,
+ js : LI.InboxNav.Scripts
+ },
+ company : {
+ id : 'nav-primary-company',
+ url : '/company/chrome/nav'
+ }
+ }
+ });
+ </script>
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ LI_WCT([
+ "control-1",
+ "control-2",
+ "control-3",
+ ]);
+ 
+ 
+ 
+ </script>
+ 
+ 
+ 
+
+<hr>
+
+<div id="body">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+  <div id="ad-slot-3" class="ad-hdr">
+    <div class="ad-hdr-exp-1-2">
+      <p>
+        <a href="http://www.linkedin.com/csp/crd?v=1&amp;cs=0_9LSl1BYhZRzMpUZzqJPTOEIe5tx49xByEvsn-NrVJtwpP0zuG1KIplF855qLoTdG5N9MNj-Idttfb3NrmpUUJzIdKL2LU4rYNl10PR-PkfGcR5XuMnMM8BTScTBlqWS1jGaOeaZhymepcCVGg1ko6GkUl_NxC7k94psLoYnyI_r1nsSrPkpMslu9dahrDnJEpoHNInEYoyRM9royAx7_zNzU9yzXkzwtJYcyJHLNNFm2tHsS9NPJn8uT_WxkrzsHD9ZyeUt2K3El2yyZSI9RIHMsZaxXG7BB_zFXSY4WoDwzkfh0tsiSnXylEsHLrcVhsA_1bdXWins7HH-O-bwUnCjOdhviF_zJq6RkF8onzaS" target="_blank">Code for a Startup - Join Optimizely - a fast-growing, well-funded startup in San Francisco.</a>
+        <span class="ad-hdr-profile">  From:&nbsp;&nbsp;<a href="http://www.linkedin.com/csp/crd?v=1&amp;cs=0_14ax0EU3NiOo3cjq5qUxVLqxpPDpb94Nk-xVz68_ET9QH9q4V_1bWUiHUMIKIeaQ1VbXCQZXL7nekAOl2w8NZeWDqLX0abUvYM7gN5dUAIn1nsSrPkpMslu9dahrDnJEpoHNInEYoyRM9royAx7_zNzU9yzXkzwtJYcyJHLNNFm2tHsS9NPJn8uT_WxkrzsHD9ZyeUt2K3El2yyZSI9RIHMsZaxXG7BB_zFXSY4WoDwfaxROatlBpVnQHViZwd3zcA_1bdXWins7HH-O-bwUnCjOdhviF_zJq6RkF8onzaS" target="_blank">Optimizely</a></span>
+      </p>
+</div>
+
+  </div>
+ 
+ 
+
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+<div id="section-header">
+  <ul id="nav-secondary">
+    <li id="nav-edit-profile"><a href="http://www.linkedin.com/profile/edit?locale=en_US"><span>Edit Profile</span></a></li>
+    <li id="nav-my-profile"><a href="http://www.linkedin.com/profile/view?id=13342126&amp;locale=en_US&amp;trk=tab_pro"><span>View Profile</span></a></li>
+  </ul>
+</div>
+
+ <div class="wrapper">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<div id="global-error">
+</div>
+
+
+    
+
+    <!-- leo:gobackTemplateLinks/ -->
+
+    <div id="main" class="profile grid-a">
+      <div id="content" class="">
+        <div class="profile-header">
+          <div class="masthead vcard contact" id="member-13342126">
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+      <div class="image" style="display: block;" id="profile-picture">
+        
+            <a href="http://www.linkedin.com/memberPicture?display=&amp;goback=%2Enpe_*1_*1_*1_*1">
+              <img src="edit_files/21820f5.jpg" class="photo" alt="Omar Sehgal" width="80" height="80">
+            </a>
+            <p class="caption">
+              <span class="edit">
+                <a href="http://www.linkedin.com/memberPicture?display=&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a>
+              </span>
+            </p>
+          
+		</div>
+	
+  
+  
+      <h1>
+        
+          <span id="name" class="n fn">
+            <span class="given-name">Omar</span>
+            
+            <span class="family-name">Sehgal</span>
+          </span>
+          
+        
+        
+      
+      
+        
+      
+    
+        
+          <span class="edit">
+            <a name="editBasicInfo" href="http://www.linkedin.com/profile/edit-basic-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Edit your name">Edit</a>
+          </span>
+        
+      </h1>
+    
+  
+  
+    <p class="title" style="display: block;">
+    
+    
+        Sr. Software Engineer
+      
+    
+    </p>
+  
+  
+  
+       
+     
+  
+  <dl id="headline" class="demographic-info adr">
+    <dt>Location</dt>
+    <dd class="locality">
+    
+        
+          
+	      San Francisco Bay Area
+            
+	    
+      
+    </dd>
+    
+    <dt>Industry</dt>
+        <dd class="industry">
+    
+            Computer Software
+      
+    </dd>
+    
+  </dl>
+  
+       
+     
+      
+
+
+
+
+
+
+
+
+            
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+  
+      
+      
+
+      
+        
+      
+
+
+<div class="post-profile" id="post-module">
+
+
+  
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    
+      
+    
+        
+        <p class="my-current">
+          
+            <a id="yui-gen2" href="#">Post an update</a>
+          
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          <script id="controlinit-4" type="text/javascript+initialized" class="li-control">
+                    
+      
+        
+        
+        /* extlib: _toggleclass */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-4', 'ToggleClass', {
+            classname: 'is-post-mode',
+            on: '#post-module',
+            stopEvent: true
+          });
+                  </script>
+              
+        
+          
+        
+            
+        
+        
+      
+      
+      
+      
+      
+    
+        </p>
+        
+        <div class="post-form">
+          
+            <span id="yui-gen3" class="postclose">[ <a href="#close">Close</a> ]</span>
+          
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          <script id="controlinit-5" type="text/javascript+initialized" class="li-control">
+                    
+      
+    
+            LI.Controls.addControl('control-5', 'ToggleClass', {
+            classname: 'is-post-mode',
+            on: '#post-module',
+            stopEvent: true
+          });
+                  </script>
+              
+        
+          
+        
+            
+        
+        
+      
+      
+      
+      
+      
+    
+          <h3>Post an update</h3>
+          
+            
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 
+ <form action="/share?submitPost=" method="POST" name="postModuleForm" gbpush="true" id="share-form" class="post">
+ 
+ 
+ 
+
+ <input value="false" name="ajax" id="share-ajax" type="hidden">
+
+ <input value="0" name="contentImageCount" id="share-img-total" type="hidden">
+ <input value="-1" name="contentImageIndex" id="share-img-selected-idx" type="hidden">
+ <input value="" name="contentImage" id="share-img-selected-url" type="hidden">
+ 
+ <input value="" name="contentEntityID" id="share-entity-id" type="hidden"> 
+ <input value="" name="contentUrl" id="share-entity-url" type="hidden"> 
+ 
+ 
+ <label style="display: none;" id="yui-gen4" for="postText-postModuleForm" class="ghost">Share an update </label>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-6" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _ghostlabel */
+ 
+ 
+ 
+ LI.Controls.addControl('control-6', 'GhostLabel', {});
+ </script>
+ 
+ 
+ <span class="error" id="postText-postModuleForm-error"></span>
+ 
+ 
+ <textarea name="postText" id="postText-postModuleForm" rows="2" cols="40" class="post-message hint">Share an update </textarea>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-7" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _sharepostmodule */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+LI.ShareUrlRegExTestB = /(?:(?:https?:\/\/(?:[A-Z0-9][A-Z0-9_\-]*\.)+[a-z]{2,4}|(?:[A-Z0-9][A-Z0-9_\-]*\.)+(?:com|edu|net|org))(?::(?:\d+))?)(?:\/[^\s]*)?/i;
+ 
+ 
+ LI.Controls.addControl('control-7', 'SharePostModule', {
+ getObjectURL: '/share?getPreview=&url=',
+ postModuleURL: '/nhome/postModule',
+ injectionMode: 'reload',
+ focusOnPageLoad: false,
+ urlRegEx: false
+ });
+ </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-8" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _checktextarea */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'CheckTextarea-error', 'You have exceeded the maximum length by <strong>{0}<\/strong> character(s).' );
+LI.i18n.register( 'CheckTextarea-empty',   'You may add up to <strong>{0}<\/strong> characters.' );
+LI.i18n.register( 'CheckTextarea-full', 'You may not add more characters.' );
+LI.i18n.register( 'CheckTextarea-countdown',   'You may add up to <strong>{0}<\/strong> more characters.' );
+LI.i18n.register( 'CheckTextarea-twitter-under', 'Count: <strong>{1}<\/strong>' );
+LI.i18n.register( 'CheckTextarea-twitter-over',   'Count: <strong>{1}<\/strong> (Only 140 characters will show on Twitter) ' );
+ 
+ 
+ LI.Controls.addControl('control-8', 'CheckTextarea', { 
+ maxLength: 600, 
+ grow: { onFocus: 35 },
+ useTwitterCountdown: 'post-cc-twitter'
+ });
+ </script>
+ 
+ 
+ 
+ <div id="share-mode" class="share-mode">
+ 
+ <div class="share-loading"></div>
+ 
+ <div id="share-view" class="share-view"></div>
+ 
+ <div class="share-edit">
+ <ul id="share-edit-list" class="form">
+ <li>
+ <input name="contentTitle" id="share-edit-title" class="text" maxlength="200" type="text">
+ </li>
+ <li id="share-edit-meta"></li>
+ <li>
+ <textarea name="contentSummary" id="share-edit-summary" class="text"></textarea>
+ </li>
+ <li id="share-include-photo-wrapper">
+ <input name="contentImageIncluded" value="true" id="share-include-photo" class="check" checked="checked" type="checkbox">
+ <label for="contentImageIncluded-postModuleForm">Include photo</label>
+ </li>
+ <li>
+ <input name="#" value="Preview" class="btn-primary" id="share-edit-submit" type="button">
+ or
+ <a href="#" id="share-edit-cancel">Cancel</a>
+ </li>
+ </ul> 
+ </div>
+ 
+ <div class="share-attach">
+ <a href="#" class="share-close share-close-attach">Close</a>
+ <h4>Add URL:</h4>
+ <p>
+ <input name="#" class="text" id="share-attach-input" type="input">
+ <input name="#" value="Attach" class="btn-primary" id="share-attach-link" type="button">
+ </p>
+ </div>
+ 
+ </div>
+ 
+ <div class="post-actions">
+ 
+ <div id="attach">
+ <a href="#">Attach a link</a>
+ </div>
+ 
+ <div class="settings" id="share-settings">
+ <p>visible to:</p> 
+ 
+ <div id="yui-gen5" class="menu-basic styled-dropdown">
+ <span class="label"> <span> anyone </span> </span><select name="postVisibility" id="postVisibility-postModuleForm">
+<option value="EVERYONE" selected="selected">anyone</option><option value="CONNECTIONS">connections only</option></select>
+ <ul class="drop">
+ <li class="separator"><a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Flearn%2Elinkedin%2Ecom%2Fthe-homepage%2F%23sharing&amp;urlhash=Kt1u" class="normal-link">Learn more »</a></li>
+ </ul>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-9" type="text/javascript+initialized" class="li-control">
+ 
+ 
+ LI.Controls.addControl('control-9', 'StyledDropdown', { listClass: 'drop' });
+ </script>
+ 
+ 
+ </div>
+ 
+ <div class="twitter">
+ <input name="tweet" value="tweet" id="post-cc-twitter" class="check" type="checkbox">
+ <select name="tetherAccountID" id="post-twit-account-select" class="twit-account-select">
+<option value="11133021" selected="selected">omarsehgal</option></select>
+ 
+ <div id="yui-gen6" class="twitlogo multi" title="Tweet this as omarsehgal">
+ <span class="hide">CC Twitter</span>
+ <ul id="post-twit-account-list" class="twit-account-list"><li><a href="#" class="selected twit-userID" title="Tweet this as omarsehgal" data-twit-id="11133021">omarsehgal</a></li><li class="separator"><a href="https://www.linkedin.com/secure/settings?twitterSettings=&amp;trk=spm_twit_setngs" class="edit">Twitter Settings</a></li></ul>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-10" type="text/javascript+initialized" class="li-control">
+ 
+ /* extlib: _nustweetstatus */
+ 
+ 
+ 
+ LI.Controls.addControl('control-10', 'NusTweetStatus', {
+ mode: 'multiple-accounts',
+ popupURL: 'https://www.linkedin.com/secure/tether?start=&provider=TWITTER&mini=&twitterSettings=upsell&twitterSettingsHideProfile=false&trk=spm_twit_add',
+ settingsURL: 'https://www.linkedin.com/secure/settings?twitterSettings=&trk=spm_twit_setngs',
+ selectId: 'post-twit-account-select',
+ ulId: 'post-twit-account-list',
+ i18n: {
+ editLinkText: 'Twitter Settings',
+ logoTooltip: 'Tweet this as omarsehgal'
+ }
+ });
+ </script>
+ 
+ 
+ </div> 
+ 
+ <div class="submit">
+ <input name="" value="Share" class="btn-primary" id="share-submit" type="submit">
+ </div>
+ 
+ </div>
+
+ 
+ 
+ 
+ 
+ <input name="submitPost" value="" id="submitPost-postModuleForm" type="hidden"><input name="csrfToken" value="ajax:4142211357854656029" id="csrfToken-postModuleForm" type="hidden"><input name="sourceAlias" value="0_bDL6Qg16XxC0mXAS8vUxbvElVv3wvoSqKhWatYABScj" id="sourceAlias-postModuleForm" type="hidden">
+ </form>
+ 
+ 
+ 
+
+          
+        </div>
+    
+      
+
+  
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    
+    
+
+
+</div>
+          </div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="section-title"> Overview </h2>
+<dl id="overview">
+  
+  
+  <dt class="summary-current" style="display: block;">
+    Current
+  </dt>
+  <dd class="summary-current" style="display: block;">
+    
+        <ul class="current">
+			    
+			      <li>
+              
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        Sr. Software Engineer
+      
+    
+    
+      <span class="at">at </span>
+      Intel
+    
+	
+
+
+
+
+
+
+
+			        
+		          <span class="edit">  <a href="http://www.linkedin.com/profile/edit-position?positionID=18677889&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this position">Edit</a> </span>
+			        
+			      </li>
+			    
+        </ul>
+		    
+		    
+			  
+			  
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+    <a class="add" name="addPosition" href="http://www.linkedin.com/profile/edit-position?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">
+	    
+	       + <strong>Add</strong> a current position
+	      
+    </a>
+  
+
+			  
+      
+  </dd>
+  
+
+  
+  
+  <dt class="summary-past" style="display: block;">
+    Past
+  </dt>
+  <dd class="summary-past" style="display: block;">
+    
+        <ul class="past">
+		    
+		      <li>
+		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        Software Developer
+      
+    
+    
+      <span class="at">at </span>
+      ALG
+    
+	
+
+
+
+
+
+
+
+		      </li>
+		    
+		      <li>
+		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        Software Developer
+      
+    
+    
+      <span class="at">at </span>
+      Bike-aLog
+    
+	
+
+
+
+
+
+
+
+		      </li>
+		    
+		      <li>
+		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        Technical Account/Production Specialist
+      
+    
+    
+      <span class="at">at </span>
+      Presenter, Inc
+    
+	
+
+
+
+
+
+
+
+		      </li>
+		    
+		    </ul>
+		    
+        
+        
+        
+      
+  </dd>
+  
+
+  
+  
+    <dt class="summary-education" style="display: block;">
+       Education
+    </dt>
+    <dd class="summary-education" style="display: block;">
+      
+		      <ul>
+		        
+              
+ 		          <li>
+	              University of California, Santa Barbara
+		          </li>
+		          
+		        
+              
+ 		          <li>
+	              Stanford University
+		          </li>
+		          
+		        
+              
+ 		          <li>
+	              Stanford University
+		          </li>
+		          
+		        
+		      </ul>
+		      
+		      
+		      
+        
+    </dd>
+  
+  
+  
+  
+    <dt>
+       Recommendations
+    </dt>
+    <dd>
+      <p>
+        
+            
+                 <a href="#profile-recommendations"><strong name="endorsedyoucount">12</strong> recommendations</a>
+                 <span class="edit"> <a href="http://www.linkedin.com/references">Edit</a> </span>
+              
+          
+      </p>
+    </dd>
+  
+
+  
+  
+    
+    <dt>
+      Connections
+    </dt>
+    <dd class="overview-connections">
+      <p>
+      
+          
+        <a href="http://www.linkedin.com/profile?viewConns=&amp;key=13342126&amp;goback=%2Enpe_*1_*1_*1_*1" name="profsum"><strong>207</strong> connections</a>
+            
+      
+      </p>
+    </dd>
+    
+  
+
+  
+  
+  
+    <dt class="websites">Websites</dt>
+    <dd class="websites">
+      
+	          <p class="none"><a class="add" href="http://www.linkedin.com/profile/edit-additional-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong> a website</a></p>
+	      
+    </dd>
+  
+  
+  
+    
+  
+  
+    <dt>
+    	Twitter
+    </dt>
+    <dd>
+        
+		        
+		          <p>
+		            <a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Etwitter%2Ecom%2Fomarsehgal&amp;urlhash=j7Qv&amp;trk=pro_twit" target="_blank">omarsehgal</a>
+		            
+		              <span class="edit">
+		                
+		                <a href="https://www.linkedin.com/secure/settings?twitterSettings=&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a>
+		              </span>
+	              
+		          </p>
+		        
+            
+      </dd>
+  
+    
+
+  
+  
+    
+   <dt>Public Profile</dt>
+    <dd class="last">
+      <p class="url">
+        
+            <a href="http://www.linkedin.com/in/omarsehgal" title="View public profile" name="webProfileURL">http://www.linkedin.com/in/omarsehgal</a>
+          
+        
+        
+          <span class="edit">  <a href="http://www.linkedin.com/myprofile?editwp=&amp;locale=en_US">Edit</a> </span>        
+        
+        
+      </p>
+      </dd>
+    
+  
+  
+  
+  
+    
+  
+</dl>
+
+<script type="text/javascript">
+  showHide.init('overview');
+</script>
+
+
+
+
+
+
+
+
+
+          
+            <div class="profile-actions-tertiary-container">
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+  
+      
+  
+      
+  
+      
+  
+      
+
+      
+      
+
+
+
+<ul class="profile-actions-tertiary has-3">
+        <li class="share">
+          <a href="http://www.linkedin.com/forwardProfileMsg?displayCreate=&amp;profileID=13342126&amp;profileName=Omar+Sehgal&amp;network=M&amp;authToken=u5q0&amp;authType=name&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=prof-0-ab-share-0">
+            <span>Share</span>
+          </a>
+        </li>
+        <li class="pdf">
+              <a href="http://www.linkedin.com/profile/pdf?id=13342126&amp;locale=en_US&amp;authType=name&amp;authToken=u5q0&amp;pdfFileName=OmarSehgal&amp;disablePdfCompression=true&amp;trk=pdf_pro_full" title="Download as PDF">
+            <span>PDF</span>
+          </a>
+        </li>
+        <li class="print">
+          <a href="javascript:window.print();" title="Print Profile">
+            <span>Print</span>
+          </a>
+        </li>
+</ul>
+            </div>
+          
+        </div>
+          <div class="add-sections">
+            <h2>
+              <span class="new">NEW</span> 
+              <strong>Add sections</strong> to reflect achievements and experiences on your profile.
+            </h2>
+                  
+                    <a id="yui-gen7" class="add" href="http://www.linkedin.com/profile/add-profile-section?goback=%2Enpe_*1_*1_*1_*1">Add sections</a>
+                  
+      
+      
+      
+      
+          <script id="controlinit-11" type="text/javascript+initialized" class="li-control">
+                    
+        /* extlib: _dialog */
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'Dialog-closeWindow', 'Close this window' );
+LI.i18n.register( 'Dialog-or',   'or' );
+LI.i18n.register( 'Dialog-cancel', 'Cancel' );
+LI.i18n.register( 'Dialog-submit',   'Submit' );
+LI.i18n.register( 'Dialog-error-generic',   'We\'re sorry. Something unexpected happened and your request could not be completed. Please try again.' );
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+  
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+  
+  
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+
+  
+
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+
+LI.ComposeDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://static01.linkedin.com/scds/concat/common/js?h=a1qcfld6rclqcxobdl96wei6s"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=b6a15x3mhw53jqxn6h8454h8x"]
+              
+            
+          
+        
+      
+    
+};
+
+LI.FeedbackDialogDependencies = {
+  url: '/lite/feedback-form',
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=dfeel1pw0g1k0i02ad5s9qpve"]
+              
+            
+          
+        
+      
+    
+};
+
+LI.WhoSharedDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://static01.linkedin.com/scds/concat/common/js?h=d75r0d3v3wnz162gsnfx3jalf-1mxovmzyj16fqqini1y9aio4c-4mdnhz5oidl95blrmjxaw7815-7kikx4cof8m5xywfppkzcv0gx-dpd1zk8wo0d626juzinrxcaxh-a4vb3naxqpmnt35pswe1bh9f6"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://static02.linkedin.com/scds/concat/common/css?h=1z88mn84qz9i0wwqc56umb2yh-f0d6obb5jo8x5ff7g5f3w99ln-6p48z49pi4sggv71v0l8tblx9-9657npvuqlf5ozaxhw1ktiihn"]
+              
+            
+          
+        
+      
+    
+};
+        
+    
+            LI.Controls.addControl('control-11', 'Dialog', {
+                     name: 'addNewSections',
+                     type: 'interrupt',
+                     width: 800,
+                     className: 'adding-sections',
+                     content: { 
+                       url: '/profile/add-profile-section-modal?goback=%2Enpe_*1_*1_*1_*1', 
+                       title: 'Add Sections' 
+                     }
+                   });
+                  </script>
+        
+    
+              
+          </div>
+        
+         <div id="yui-gen16" class="resume">
+           
+      
+        <form action="/profile/section-reorder-submit" method="POST" name="sectionReorderForm">
+       
+       
+    
+               <input name="sectionOrder" value="" id="sectionOrder-sectionReorderForm" type="hidden">
+           
+      
+      
+          
+          <input name="locale" value="" id="locale-sectionReorderForm" type="hidden"><input name="nudgeID" value="" id="nudgeID-sectionReorderForm" type="hidden"><input name="timestamp" value="0" id="timestamp-sectionReorderForm" type="hidden"><input name="sectionOrder" value="" id="sectionOrder-sectionReorderForm" type="hidden"><input name="csrfToken" value="ajax:4142211357854656029" id="csrfToken-sectionReorderForm" type="hidden"><input name="sourceAlias" value="0_bDL6Qg16XxC0mXAS8vUxbvElVv3wvoSqKhWatYABScj" id="sourceAlias-sectionReorderForm" type="hidden"><input name="goback" value=".npe_*1_*1_*1_*1" id="goback-sectionReorderForm" type="hidden">
+          </form>
+        
+      
+    
+                 
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="section draggable li-ig-profile" id="profile-summary" style="display: block;">
+
+    <div class="header">
+      <h2 title="Drag to rearrange profile sections" style="" class="drag-handle" id="yui-gen8">
+				 Summary
+				<span class="edit"> <a name="editExpertise" href="http://www.linkedin.com/profile/edit-summary?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a> </span>
+				
+			</h2>
+    </div>
+
+    <div class="content">
+
+      
+      
+        
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+    
+  
+      
+
+      
+      
+
+    <p class=" description">
+        Motivated, dynamic and proactive Software Engineer with over 5 
+years of experience and a track record of proven success in highly 
+visible and challenging roles within companies such as Intel. Currently 
+managing design environments and software tools for Intel’s worldwide 
+CPU R&amp;D projects. Broad technical background spanning analysis, 
+design, implementation &amp; deployment of projects with a focus on 
+managing projects spread across global sites.
+    </p>
+
+    
+        
+        
+	      
+	      
+	        <div id="profile-specialties" style="display: block;">
+	          <h3>Specialties</h3>
+	          
+                
+	                <p class="none"><span class="add">
+	                <a name="addSpecialties" href="http://www.linkedin.com/profile/edit-summary?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong> Specialties</a>
+	                </span></p>
+	                
+	            
+	        </div>
+	      
+
+    </div>
+  <div class="progress-indicator"><span> </span></div></div>
+
+
+
+
+
+
+
+
+
+                 
+      
+      
+      
+      
+          <script id="controlinit-12" type="text/javascript+initialized" class="li-control">
+                    
+        /* extlib: _sortable_section */
+          
+        
+    
+            LI.Controls.addControl('control-12', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'SUM',
+                    group: 'profile'
+                  });
+                  </script>
+        
+    
+                  
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+<div id="profile-applications" class="section installed-apps draggable li-ig-profile">
+  
+    <div class="header">
+      <h2 title="Drag to rearrange profile sections" style="" class="drag-handle" id="yui-gen9">Applications
+        <a href="http://www.linkedin.com/static?key=application_directory&amp;goback=%2Enpe_*1_*1_*1_*1" class="add">+ <strong>Add</strong> an application</a></h2>
+    </div>
+  
+  <div class="content">
+    
+      <p class="tip">Add more to your professional profile by adding applications from our featured partners.</p>
+    
+    
+        <div class="module-panel applications" id="panel-03">
+          
+            
+            
+            <script type="text/javascript">
+              YAHOO.util.Event.onDOMReady(function() {
+              
+              });
+            </script>
+          
+        </div>
+      
+  </div>
+
+  
+  <div style="display: none;">
+    <a href="http://www.linkedin.com/profile/placeholder" id="aGoBackTemplateLink"></a>
+    <a href="https://www.linkedin.com/secure/placeholder" id="aGoBackTemplateLinkSecure"></a>
+    <a href="http://www.linkedin.com/profile/placeholder" id="anogbGoBackTemplateLink"></a>
+    <a href="https://www.linkedin.com/secure/placeholder" id="anogbGoBackTemplateLinkSecure"></a>
+    <a href="http://www.linkedin.com/profile/placeholder" id="agbpushGoBackTemplateLink"></a>
+    <a href="https://www.linkedin.com/secure/placeholder?goback=%2Enpe_*1_*1_*1_*1" id="agbpushGoBackTemplateLinkSecure"></a>
+</div>
+
+<div class="progress-indicator"><span> </span></div></div>
+
+
+
+
+
+
+                  
+      
+      
+      
+      
+          <script id="controlinit-13" type="text/javascript+initialized" class="li-control">
+                    
+    
+            LI.Controls.addControl('control-13', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'APP',
+                    group: 'profile'
+                  });
+                  </script>
+        
+    
+                 
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<div class="section draggable li-ig-profile" id="profile-experience" style="display: block;">
+  <div class="header">
+    <h2 title="Drag to rearrange profile sections" style="" class="drag-handle" id="yui-gen10"> Experience
+      
+  	    
+  	        <a class="add" name="addPosition" href="http://www.linkedin.com/profile/edit-position?goback=%2Enpe_*1_*1_*1_*1"><span>+ <strong>Add</strong> a position</span></a>
+  	      
+      
+	  </h2>
+    
+	    
+	      <div id="add-primary-experience" class="dialog-container interrupt">
+	        <div class="alert attention"><p><strong>You must first add a position on your primary profile (English) in order for it to appear on this page.</strong></p></div>
+	        <p>Click Continue to add a position on your primary profile.</p>
+	        <p class="actions">
+	          <a href="http://www.linkedin.com/profile/edit-position?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" class="btn-primary">Continue</a>
+	          or
+	          <a href="#profile-experience" class="dialog-close">Cancel</a>
+	        </p>
+	      </div>
+	    
+    
+  </div>
+  <div class="content vcalendar">
+  
+		
+  
+  
+  
+  	
+    <div class="position  first experience vevent vcard current-position" style="display: block;">
+        <a class="include" href="#name"></a>
+  	    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="postitle">
+    
+      <h3 class="position-title anet"> 
+        
+            <span class="title">Sr. Software Engineer</span>
+          
+        
+         <span class="edit"><a name="editPosition" href="http://www.linkedin.com/profile/edit-position?positionID=18677889&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this position">Edit</a></span> 
+            </h3>
+            
+              <h4><strong>
+               <span class="org summary">Intel</span> 
+              </strong></h4>
+            
+          
+</div>
+
+
+
+
+
+
+
+
+
+        
+       
+     
+        
+  	    
+  	    <p class="orgstats organization-details">
+  	      Public Company; INTC; Semiconductors industry
+  	    </p>
+        
+  	    <p class="period">
+  	      
+  	          <abbr class="dtstart" title="2005-03-01">March 2005</abbr>
+  	          
+  	              – <abbr class="dtstamp" title="2011-05-01">Present</abbr>
+  	            
+  	          <span class="duration"><span class="value-title" title="P6Y3M"> </span>(6 years 3 months)</span>
+  	        
+          
+  	    </p>
+        
+       
+     
+  
+        
+  		      
+              <p class="desc">You can <a name="addSummary" href="http://www.linkedin.com/profile/edit-position?positionID=18677889&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">provide a brief description</a> for this position. </p>
+  		      
+  		    
+  
+  		
+  		
+  	    
+  	        <span name="_endorsementSection"></span>
+  		        <p class="recommendations">
+  		          
+  		              
+  		              
+  		                 5 visible recommendations
+  		              
+  		              
+  		              for this position <span class="edit"><a name="manageEndorsement" href="http://www.linkedin.com/references?mrp=&amp;posID=18677889&amp;goback=%2Enpe_*1_*1_*1_*1">Manage</a> </span>
+  		            
+  		        </p>
+          
+       
+  	    
+  	  </div>
+    
+  
+  	
+    <div class="position   experience vevent vcard past-position" style="display: block;">
+        <a class="include" href="#name"></a>
+  	    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="postitle">
+    
+      <h3 class="position-title anet"> 
+        
+            <span class="title">Software Developer</span>
+          
+        
+         <span class="edit"><a name="editPosition" href="http://www.linkedin.com/profile/edit-position?positionID=18678134&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this position">Edit</a></span> 
+            </h3>
+            
+              <h4><strong>
+               <span class="org summary">ALG</span> 
+              </strong></h4>
+            
+          
+</div>
+
+
+
+
+
+
+
+
+
+        
+       
+     
+        
+  	    
+  	    <p class="orgstats organization-details">
+  	      Privately Held; Management Consulting industry
+  	    </p>
+        
+  	    <p class="period">
+  	      
+  	          <abbr class="dtstart" title="2004-06-01">June 2004</abbr>
+  	           – <abbr class="dtend" title="2005-03-01">March 2005</abbr>
+  	          <span class="duration"><span class="value-title" title="P10M"> </span>(10 months)</span>
+  	        
+          
+  	    </p>
+        
+       
+     
+  
+        
+  		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+    
+  
+      
+
+      
+      
+
+    <p class=" description">
+        Developed ASP.Net/C# web applications involving database design,
+ security, UI development. Major projects included deployment of new 
+corporate website and development of flagship product used for 
+estimating automobile residual data for major car companies.
+    </p>
+
+    
+  		    
+  
+  		
+  		
+  	    
+  	        <span name="_endorsementSection"></span>
+  		        <p class="recommendations">
+  		          No recommendations for this position
+  		              <span class="edit"><a name="manageEndorsement" href="http://www.linkedin.com/recRequests?cor=&amp;forPos=18678134&amp;goback=%2Enpe_*1_*1_*1_*1">Ask for a recommendation</a> </span>
+  		            
+  		        </p>
+          
+       
+  	    
+  	  </div>
+    
+  
+  	
+    <div class="position   experience vevent vcard past-position" style="display: block;">
+        <a class="include" href="#name"></a>
+  	    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="postitle">
+    
+      <h3 class="position-title anet"> 
+        
+            <span class="title">Software Developer</span>
+          
+        
+         <span class="edit"><a name="editPosition" href="http://www.linkedin.com/profile/edit-position?positionID=18678228&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this position">Edit</a></span> 
+            </h3>
+            
+              <h4><strong>
+               <span class="org summary">Bike-aLog</span> 
+              </strong></h4>
+            
+          
+</div>
+
+
+
+
+
+
+
+
+
+        
+       
+     
+        
+  	    
+  	    <p class="orgstats organization-details">
+  	      Computer Software industry
+  	    </p>
+        
+  	    <p class="period">
+  	      
+  	          <abbr class="dtstart" title="2003-06-01">June 2003</abbr>
+  	           – <abbr class="dtend" title="2004-04-01">April 2004</abbr>
+  	          <span class="duration"><span class="value-title" title="P11M"> </span>(11 months)</span>
+  	        
+          
+  	    </p>
+        
+       
+     
+  
+        
+  		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+    
+  
+      
+
+      
+      
+
+    <p class=" description">
+        Worked on web-enabling Bike-alog applications for online 
+customer usage. Developed SpokeMaster™, a windows application enabling 
+users to customize bicycles
+    </p>
+
+    
+  		    
+  
+  		
+  		
+  	    
+  	        <span name="_endorsementSection"></span>
+  		        <p class="recommendations">
+  		          
+  		              
+  		              
+  		                 1 visible recommendation
+  		              
+  		              
+  		              for this position <span class="edit"><a name="manageEndorsement" href="http://www.linkedin.com/references?mrp=&amp;posID=18678228&amp;goback=%2Enpe_*1_*1_*1_*1">Manage</a> </span>
+  		            
+  		        </p>
+          
+       
+  	    
+  	  </div>
+    
+  
+  	
+    <div class="position   experience vevent vcard past-position" style="display: block;">
+        <a class="include" href="#name"></a>
+  	    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="postitle">
+    
+      <h3 class="position-title anet"> 
+        
+            <span class="title">Technical Account/Production Specialist</span>
+          
+        
+         <span class="edit"><a name="editPosition" href="http://www.linkedin.com/profile/edit-position?positionID=18678066&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this position">Edit</a></span> 
+            </h3>
+            
+              <h4><strong>
+               <span class="org summary">Presenter, Inc</span> 
+              </strong></h4>
+            
+          
+</div>
+
+
+
+
+
+
+
+
+
+        
+       
+     
+        
+  	    
+  	    <p class="orgstats organization-details">
+  	      Computer Software industry
+  	    </p>
+        
+  	    <p class="period">
+  	      
+  	          <abbr class="dtstart" title="1999-11-01">November 1999</abbr>
+  	           – <abbr class="dtend" title="2002-09-01">September 2002</abbr>
+  	          <span class="duration"><span class="value-title" title="P2Y11M"> </span>(2 years 11 months)</span>
+  	        
+          
+  	    </p>
+        
+       
+     
+  
+        
+  		        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+    
+  
+      
+
+      
+      
+
+    <p class=" description">
+        Demonstrations of enterprise web technologies to clients, 
+product installation, writing technical documentation and 
+troubleshooting technical issues. Managed enterprise solution web 
+accounts for clients such as Microsoft, IBM, TrendMicro, Guidant. I 
+travelled extensively throughout the US for product demos.
+    </p>
+
+    
+  		    
+  
+  		
+  		
+  	    
+  	        <span name="_endorsementSection"></span>
+  		        <p class="recommendations">
+  		          
+  		              
+  		              
+  		                 6 visible recommendations
+  		              
+  		              
+  		              for this position <span class="edit"><a name="manageEndorsement" href="http://www.linkedin.com/references?mrp=&amp;posID=18678066&amp;goback=%2Enpe_*1_*1_*1_*1">Manage</a> </span>
+  		            
+  		        </p>
+          
+       
+  	    
+  	  </div>
+    
+  
+  
+  </div>
+<div class="progress-indicator"><span> </span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+      
+      
+      
+      
+          <script id="controlinit-14" type="text/javascript+initialized" class="li-control">
+                    
+    
+            LI.Controls.addControl('control-14', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'EXP',
+                    group: 'profile'
+                  });
+                  </script>
+        
+    
+                  
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="section draggable li-ig-profile" id="profile-education" style="display: block;">
+    <div class="header">
+      <h2 title="Drag to rearrange profile sections" style="" class="drag-handle" id="yui-gen11">
+         Education
+        
+          
+              <a class="add" name="addEducation" href="http://www.linkedin.com/profile/edit-education?goback=%2Enpe_*1_*1_*1_*1"><span>+ <strong>Add</strong> a school</span></a>
+            
+          
+        
+      </h2>
+    </div>
+    <div class="content vcalendar">
+      
+      
+      
+        
+        
+          
+            <div class="position  first education vevent vcard" id="9631273">
+
+              
+              <h3 class="summary fn org">
+                
+                University of California, Santa Barbara
+                
+                  <span class="edit"><a href="http://www.linkedin.com/profile/edit-education?educationID=9631273&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this school">Edit</a></span>
+                
+                
+              </h3>
+
+              
+              <h4>
+                
+                <span class="degree">BS</span>, 
+                
+                  <span class="major">
+                  Computer Science
+                  </span>
+                
+                
+              </h4>
+
+              
+              
+       
+     
+              
+                  
+                  <p class="period">
+                    <abbr class="dtstart" title="2002-01-01">2002</abbr> – <abbr class="dtend" title="2005-12-31">2005</abbr>
+                    
+                  </p>
+                
+              
+       
+     
+
+              
+              
+                   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+    
+  
+      
+
+      
+      
+
+    <p class=" desc">
+        
+    </p>
+
+    
+                
+
+              
+              
+                  <p class="desc" name="activities"><em>Activities and Societies:</em>
+                  Toastmasters International
+                  </p>
+                
+
+              
+              
+              
+                
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+  
+  
+    <span name="_endorsementSection"></span>
+    <p class="recommendations">
+      
+          No recommendations for this education <span class="edit"><a name="manageEndorsement" href="http://www.linkedin.com/recRequests?cer=&amp;forPos=9631273&amp;goback=%2Enpe_*1_*1_*1_*1">Request Recommendations</a></span>
+        
+    </p>
+  
+
+  
+
+
+
+
+              
+            </div>
+          
+        
+          
+            <div class="position  education vevent vcard" id="64809120">
+
+              
+              <h3 class="summary fn org">
+                
+                Stanford University
+                
+                  <span class="edit"><a href="http://www.linkedin.com/profile/edit-education?educationID=64809120&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this school">Edit</a></span>
+                
+                
+              </h3>
+
+              
+              <h4>
+                
+                
+                
+                
+              </h4>
+
+              
+              
+       
+     
+              
+                  
+                
+              
+       
+     
+
+              
+              
+                   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+    
+  
+      
+
+      
+      
+
+    <p class=" desc">
+        
+    </p>
+
+    
+                
+
+              
+              
+                  
+                    <p class="desc">
+                      You can <a href="http://www.linkedin.com/profile/edit-education?educationID=64809120&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" name="suggestAddActivitiesToEdu">add activities and societies</a> you participated in at this school.
+                    </p>
+                  
+                
+
+              
+              
+              
+                
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+  
+  
+    <span name="_endorsementSection"></span>
+    <p class="recommendations">
+      
+          No recommendations for this education <span class="edit"><a name="manageEndorsement" href="http://www.linkedin.com/recRequests?cer=&amp;forPos=64809120&amp;goback=%2Enpe_*1_*1_*1_*1">Request Recommendations</a></span>
+        
+    </p>
+  
+
+  
+
+
+
+
+              
+            </div>
+          
+        
+          
+            <div class="position  education vevent vcard" id="64820900">
+
+              
+              <h3 class="summary fn org">
+                
+                Stanford University
+                
+                  <span class="edit"><a href="http://www.linkedin.com/profile/edit-education?educationID=64820900&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" title="Change or delete this school">Edit</a></span>
+                
+                
+              </h3>
+
+              
+              <h4>
+                
+                
+                
+                
+              </h4>
+
+              
+              
+       
+     
+              
+                  
+                
+              
+       
+     
+
+              
+              
+                   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+    
+  
+      
+
+      
+      
+
+    <p class=" desc">
+        
+    </p>
+
+    
+                
+
+              
+              
+                  
+                    <p class="desc">
+                      You can <a href="http://www.linkedin.com/profile/edit-education?educationID=64820900&amp;locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1" name="suggestAddActivitiesToEdu">add activities and societies</a> you participated in at this school.
+                    </p>
+                  
+                
+
+              
+              
+              
+                
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+  
+  
+    <span name="_endorsementSection"></span>
+    <p class="recommendations">
+      
+          No recommendations for this education <span class="edit"><a name="manageEndorsement" href="http://www.linkedin.com/recRequests?cer=&amp;forPos=64820900&amp;goback=%2Enpe_*1_*1_*1_*1">Request Recommendations</a></span>
+        
+    </p>
+  
+
+  
+
+
+
+
+              
+            </div>
+          
+        
+      
+    </div>
+  <div class="progress-indicator"><span> </span></div></div>
+
+
+
+
+
+
+
+
+                  
+      
+      
+      
+      
+          <script id="controlinit-15" type="text/javascript+initialized" class="li-control">
+                    
+    
+            LI.Controls.addControl('control-15', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'EDU',
+                    group: 'profile'
+                  });
+                  </script>
+        
+    
+                  
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+<div class="section draggable li-ig-profile" id="profile-recommendations">
+  <div class="header">
+    
+          <h2 title="Drag to rearrange profile sections" style="" class="drag-handle" id="yui-gen12">Recommendations <a class="add" href="http://www.linkedin.com/references?mrs="> <span>+ <strong>Ask</strong> for a recommendation</span></a></h2>
+      
+  </div>
+  
+  <div class="content">
+
+    
+
+    
+      
+      
+        
+        
+          <div class="reference-position first">
+            
+                
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="postitle">
+    
+      <h3 class="position-title anet"> 
+        
+            <span class="title">Sr. Software Engineer</span>
+          
+        
+        
+            </h3>
+            
+              <h4><strong>
+               <span class="org summary">Intel</span> 
+              </strong></h4>
+            
+          
+</div>
+
+
+
+
+
+
+
+
+
+
+                <p class="recommendations">
+                  
+                  
+                    5 visible recommendations
+                  
+                  
+                  for this position:
+                  <span class="edit"><a href="http://www.linkedin.com/references?mrp=&amp;posID=18677889&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a></span>
+                </p>
+
+              
+
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar is extremely quick in identifying engineering
+ problems in his team's work; he is one of the most diligent people I've
+ ever seen who works to get to the root cause of those problems. Omar 
+also demonstrates a very strategic grasp of the whole engineering 
+project he's working on -- not just the tactical elements that he or any
+ one individual on the team works on.  He has a very natural ability to 
+frame everything he does (as well as what his team members do) in the 
+context of what's best and most efficient for the whole engineering 
+project. 
+<br>
+
+<br>
+Given all the people I've worked with over the past 30 years, I've never
+ seen anyone who handles problems and presents such a strategic and 
+end-to-end thinking process with their engineering projects as has Omar.
+  He is a real asset to any team!”
+                    <span class="date">June 23, 2009</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="David is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=7291159&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View David's Profile">David Bybel</a>,
+            
+                      <em> ..., Intel</em><br>
+                      worked with Omar at Intel
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar has a great attitude and quickly resolves customer issues. Great asset to have in the team!”
+                    <span class="date">September 9, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Thyagu is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=3675155&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Thyagu's Profile">Thyagu Srinivasan</a>,
+            
+                      <em> Engineering Manager, Intel</em><br>
+                      managed Omar indirectly at Intel
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar has demonstrated strong customer orientation in resolving issues in highly stressful production environments.”
+                    <span class="date">September 7, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Bharat is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=7039407&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Bharat's Profile">Bharat Krishna</a>,
+            
+                      <em> Staff CAD Engineer, Intel Corp</em><br>
+                      managed Omar indirectly at Intel
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar's "can do" attitude as well as high energy in
+ a high pressure situations is what sets him apart from others. He ramps
+ up on new areas quickly and willing to take on challenging tasks. He is
+ fun to work with.”
+                    <span class="date">August 25, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Rohit is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=2710250&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Rohit's Profile">Rohit Vachher</a>,
+            
+                      <em> Component Engineer/Tech Lead, Intel Corp</em><br>
+                      worked directly with Omar at Intel
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar provided IT infrastructure support when I was
+ part of the Intel Centrino Core 2 team and was working on an important 
+project for Intel. Omar supported engineers physically located at three 
+Intel sites. I have always observed Omar provide high quality support 
+and IT solutions. Omar is also very friendly to work with and was high 
+accessible for any type of support issues.”
+                    <span class="date">August 25, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Murali is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=496447&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Murali's Profile">Murali Seshadri</a>,
+            
+                      <em> CAD Engineer, Intel Corporation, Santa Clara, CA</em><br>
+                      worked with Omar at Intel
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+          </div>
+          
+        
+        
+      
+        
+        
+        
+      
+        
+        
+          <div class="reference-position">
+            
+                
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="postitle">
+    
+      <h3 class="position-title anet"> 
+        
+            <span class="title">Software Developer</span>
+          
+        
+        
+            </h3>
+            
+              <h4><strong>
+               <span class="org summary">Bike-aLog</span> 
+              </strong></h4>
+            
+          
+</div>
+
+
+
+
+
+
+
+
+
+
+                <p class="recommendations">
+                  
+                  
+                    1 visible recommendation
+                  
+                  
+                  for this position:
+                  <span class="edit"><a href="http://www.linkedin.com/references?mrp=&amp;posID=18678228&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a></span>
+                </p>
+
+              
+
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar played a key role in the software development
+ of our core desktop product. Though he worked with us alongside 
+attending college at UCSB, he managed his work-study schedule with great
+ ease and never let either one affect another. I would recommend Omar 
+for his technical and leadership skills and am sure he’ll prove to be an
+ asset to any company he works for.”
+                    <span class="date">August 28, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Jeff is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=23099491&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Jeff's Profile">Jeff Palley</a>,
+            
+                      <em> Owner, Bikepedia</em><br>
+                      managed Omar  at Bike-aLog
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+          </div>
+          
+        
+        
+      
+        
+        
+          <div class="reference-position">
+            
+                
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="postitle">
+    
+      <h3 class="position-title anet"> 
+        
+            <span class="title">Technical Account/Production Specialist</span>
+          
+        
+        
+            </h3>
+            
+              <h4><strong>
+               <span class="org summary">Presenter, Inc</span> 
+              </strong></h4>
+            
+          
+</div>
+
+
+
+
+
+
+
+
+
+
+                <p class="recommendations">
+                  
+                  
+                    6 visible recommendations
+                  
+                  
+                  for this position:
+                  <span class="edit"><a href="http://www.linkedin.com/references?mrp=&amp;posID=18678066&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a></span>
+                </p>
+
+              
+
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar is one of the most postive spirited and 
+energetic people I have ever managed. He's extremely bright and highly 
+motivated. He brings strong technical knowledge, creativity and 
+excellent communication skills to the job. He's committed to the team's 
+success and is passionate about his work and going well beyond 
+expectations.”
+                    <span class="date">August 26, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Tony is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=2710769&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Tony's Profile">Tony Sehgal</a>,
+            
+                      <em> Production Manager, Presenter, Inc.</em><br>
+                      managed Omar  at Presenter, Inc
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar is delightful to work with. He is always on top of his assignments and eager to go beyond.”
+                    <span class="date">August 26, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Eric is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=4226&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Eric's Profile">Eric Chen</a>,
+            
+                      <em> CEO, Presenter, Inc.</em><br>
+                      managed Omar indirectly at Presenter, Inc
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar is a smart and sociable person. He is 
+extremely tenacious in his work. He a fast learner and is very earnest 
+about finishing his tasks on time. I would highly recommend Omar for 
+leadership positions as he displays an array of relevant leadership and 
+people management skills.”
+                    <span class="date">August 24, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Richa is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=14814170&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Richa's Profile">Richa Bhatnagar</a>,
+            
+                      <em> Project Manager, Presenter, Inc</em><br>
+                      worked directly with Omar at Presenter, Inc
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“Omar was a pleasure to work with at Presenter.com.
+ He was very professional, knowledgeable and patient. These qualities 
+and more were appreciated by the entire staff at Presenter. Omar will be
+ a valuable asset to any company.”
+                    <span class="date">August 22, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Chip is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=4117&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Chip's Profile">Chip Benson</a>,
+            
+                      <em> Customer Service Mgr, Presenter Inc</em><br>
+                      managed Omar indirectly at Presenter, Inc
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“I had the pleasure of working with Omar at 
+Presenter, Inc. Omar was a valued source of expert knowledge about the 
+market and the exploding growth of streaming media. His ability to shift
+ between roles and deliver competitive analysis while at the same time 
+working on the tehnical product development was highly valued. He 
+managed to make IT, product development and marketing all part of his 
+knowledge cluster. I am glad that he was able to drive and lead these 
+analytical efforts.”
+                    <span class="date">August 22, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Brett is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=7340812&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Brett's Profile">Brett Cornell</a>,
+            
+                      <em> Marketing Specialist, Presenter, Inc.</em><br>
+                      worked with Omar at Presenter, Inc
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+              
+              
+              <div class="reference">
+                
+                  <p>“I had the pleasure of working with Omar at 
+Presenter, a multi-media SaaS startup which was acquired by WebEx.  Omar
+ is a very thoughtful and thorough technologist and project manager.  
+His passion and expertise are a winning combination for both startup and
+ mature companies.”
+                    <span class="date">August 22, 2008</span></p>
+                
+                
+                
+                    <p class="distance deg_1">
+                      
+            
+                        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+    <abbr title="Doug is your connection"><span class="network-degree">1<sup>st</sup></span></abbr>
+  
+
+    
+                        <a href="http://www.linkedin.com/profile/view?id=2888&amp;noCreateProposal=true&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Doug's Profile">Doug Erickson</a>,
+            
+                      <em> VP Sales &amp;  Business Development, Presenter, Inc.</em><br>
+                      managed Omar indirectly at Presenter, Inc
+                    </p>
+                  
+                
+                
+                
+              </div>
+              
+            
+          </div>
+          
+        
+        
+      
+    
+	
+    
+
+    
+
+    
+
+  </div>
+<div class="progress-indicator"><span> </span></div></div>
+
+
+
+
+
+                 
+      
+      
+      
+      
+          <script id="controlinit-16" type="text/javascript+initialized" class="li-control">
+                    
+    
+            LI.Controls.addControl('control-16', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'REC',
+                    group: 'profile'
+                  });
+                  </script>
+        
+    
+                 
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+    
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+
+      
+      
+
+
+
+
+
+
+
+  <div class="section draggable li-ig-profile" id="profile-additional" style="display: block;">
+  <div class="header">
+    <h2 title="Drag to rearrange profile sections" style="" class="drag-handle" id="yui-gen13"> Additional Information
+          <span class="edit"><a name="editAdditionalInfo" href="http://www.linkedin.com/profile/edit-additional-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a></span>
+    </h2>
+  </div>
+  <div class="content">
+  <dl>
+    <dt class="websites" style="display: block;">Websites:</dt>
+    <dd class="websites" style="display: block;">
+         <p><a class="add" href="http://www.linkedin.com/profile/edit-additional-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a>
+</p>
+    </dd>
+
+    <dt>Twitter:</dt>
+    <dd id="twitter">
+        <ul>
+            <li>
+              <a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Etwitter%2Ecom%2Fomarsehgal&amp;urlhash=j7Qv&amp;trk=pro_twit" target="_blank">omarsehgal</a>
+                  <span class="edit">
+                    
+                    <a href="https://www.linkedin.com/secure/settings?twitterSettings=&amp;goback=%2Enpe_*1_*1_*1_*1">Edit</a> 
+                  </span>
+            </li>
+        </ul>
+    </dd>
+
+
+   <dt class="interests" style="display: block;">Interests:</dt>
+   <dd class="interests" id="interests" style="display: block;">
+         <p><a class="add" href="http://www.linkedin.com/profile/edit-additional-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a></p>
+   </dd>
+
+    <dt class="pubgroups" style="display: block;">Groups and Associations:</dt>
+    <dd class="pubgroups" id="pubgroups" style="display: block;">
+            <p><a class="add" href="http://www.linkedin.com/profile/edit-additional-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a></p>
+
+      <ul class="groups">
+            <li class="affiliation vcard">
+          <img src="edit_files/icon_group_60x30.png" class="group-logo" alt="Internet Advertising Class Spring 2011, Stanford logo" width="60" height="30">
+                      <p class="group-data hint">
+                        <span class="fn org">Internet Advertising Class Spring 2011, Stanford</span>
+                        is  visible  on your profile.
+                        <a href="http://www.linkedin.com/groups?displaySettings=&amp;gid=3852152&amp;goback=%2Enpe_*1_*1_*1_*1" name="changeVisibilityLink">Change visibility.</a>
+                      </p>
+            </li>
+            <li class="affiliation vcard">
+          <img src="edit_files/1b72f08.png" class="group-logo" alt="Returning Indians - NRI's, Returned Indians &amp; Expatriates logo" width="60" height="30">
+                      <p class="group-data hint">
+                        <span class="fn org">Returning Indians - NRI's, Returned Indians &amp; Expatriates</span>
+                        is  visible  on your profile.
+                        <a href="http://www.linkedin.com/groups?displaySettings=&amp;gid=92146&amp;goback=%2Enpe_*1_*1_*1_*1" name="changeVisibilityLink">Change visibility.</a>
+                      </p>
+            </li>
+            <li class="affiliation vcard">
+          <img src="edit_files/2f6f565.png" class="group-logo" alt="Ruby on Rails logo" width="60" height="30">
+                      <p class="group-data hint">
+                        <span class="fn org">Ruby on Rails</span>
+                        is  visible  on your profile.
+                        <a href="http://www.linkedin.com/groups?displaySettings=&amp;gid=22413&amp;goback=%2Enpe_*1_*1_*1_*1" name="changeVisibilityLink">Change visibility.</a>
+                      </p>
+            </li>
+      </ul>
+    </dd>
+
+
+    <dt class="honors" style="display: block;">Honors and Awards:</dt>
+    <dd class="honors" style="display: block;">
+         <p><a class="add" href="http://www.linkedin.com/profile/edit-additional-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a>
+         </p>
+    </dd>
+  </dl>
+</div>
+<div class="progress-indicator"><span> </span></div></div>
+                 
+      
+      
+      
+      
+          <script id="controlinit-17" type="text/javascript+initialized" class="li-control">
+                    
+    
+            LI.Controls.addControl('control-17', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'ADD',
+                    group: 'profile'
+                  });
+                  </script>
+        
+    
+                  
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+    
+      
+      
+
+      
+        
+      
+
+
+
+  
+
+
+  
+
+  <div class="section draggable li-ig-profile" id="profile-personal">
+    <div class="header">
+      <h2 title="Drag to rearrange profile sections" style="" class="drag-handle" id="yui-gen14">Personal Information
+      
+    </h2>
+   </div>
+   <div class="content">
+      <dl>
+      
+		  <dt>Phone:</dt>
+	 	  <dd>
+	 	  
+		      <p><a class="add" href="http://www.linkedin.com/profile/edit-personal-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a></p>
+		    
+		  </dd>
+      
+      
+      <dt>Address:</dt>
+      <dd>
+      
+		      <p><a class="add" href="http://www.linkedin.com/profile/edit-personal-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a></p>
+	    
+	  </dd>
+      
+      
+      <dt>IM: </dt>
+      <dd>
+      
+		      <p><a class="add" href="http://www.linkedin.com/profile/edit-personal-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a></p>
+	    
+	  </dd>
+      
+      
+      <dt>Birthday:</dt>
+      <dd>
+      
+		      <p><a class="add" href="http://www.linkedin.com/profile/edit-personal-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a></p>
+	    
+	  </dd>
+      
+      
+      <dt>Marital status:</dt>
+      <dd>
+      
+		      <p><a class="add" href="http://www.linkedin.com/profile/edit-personal-info?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1">+ <strong>Add</strong></a></p>
+	    
+	  </dd>
+      
+      </dl>
+    </div>
+  <div class="progress-indicator"><span> </span></div></div>
+
+	
+
+
+
+                  
+      
+      
+      
+      
+          <script id="controlinit-18" type="text/javascript+initialized" class="li-control">
+                    
+    
+            LI.Controls.addControl('control-18', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'PER',
+                    group: 'profile'
+                  });
+                  </script>
+        
+    
+                  
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+	
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section draggable li-ig-profile" id="profile-contact" style="display: block;">
+  <div class="header">
+	
+		
+				<h2 title="Drag to rearrange profile sections" style="" class="drag-handle" id="yui-gen15"> Contact Settings
+		      
+		        <span class="edit"><a href="https://www.linkedin.com/profile/edit-settings?goback=%2Enpe_*1_*1_*1_*1">Edit</a></span>
+		      
+		    </h2>
+			
+		
+	</div>
+  <div class="content">
+    
+        
+        
+            <p></p>
+          
+
+        
+        
+        <h3>Interested In</h3>
+        
+        <div class="interested">
+          <ul>
+              <li>career opportunities</li>
+              <li>consulting offers</li>
+              <li>new ventures</li>
+              <li>job inquiries</li>
+              <li>expertise requests</li>
+              <li>business deals</li>
+              <li>reference requests</li>
+              <li>getting back in touch</li>
+          </ul>
+        </div>
+        
+
+        
+        
+      
+  </div>
+<div class="progress-indicator"><span> </span></div></div>
+
+
+
+
+
+
+
+
+
+
+                  
+      
+      
+      
+      
+          <script id="controlinit-19" type="text/javascript+initialized" class="li-control">
+                    
+    
+            LI.Controls.addControl('control-19', 'Sortable.Section', {
+                    existingDragHandlePath: 'h2',
+                    serverValue: 'CON',
+                    group: 'profile'
+                  });
+                  </script>
+        
+    
+          </div>
+       
+      
+      
+      
+      
+          <script id="controlinit-20" type="text/javascript+initialized" class="li-control">
+                    
+        /* extlib: _sortable_region */
+          
+        
+    
+            LI.Controls.addControl('control-20', 'Sortable.Region', {
+            constants: 'LI.Profile.Constants',
+            onCreatePostData: LI.Profile.SortableSection.onCreatePostData,
+            helpText: 'Drag to rearrange profile sections',
+            group: 'profile',
+            useForm: 'form',
+            createPostDataConfig: {
+              orderInputId: 'sectionOrder-sectionReorderForm'
+            },
+            onSuccess: function(o) {
+             
+              YDom.get('timestamp-sectionReorderForm').value=o.responseText.timestamp;
+            }
+          });
+                  </script>
+        
+    
+
+      </div>
+
+      <div id="extra" class="infobar">
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+    
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+
+      
+      
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+  
+      
+  
+      
+  
+      
+
+      
+      
+
+
+
+
+
+
+<div class="profile-actions-primary">
+
+      <a name="shareProfile" class="action primary" href="http://www.linkedin.com/forwardProfileMsg?displayCreate=&amp;profileID=13342126&amp;profileName=Omar+Sehgal&amp;network=M&amp;authToken=u5q0&amp;authType=name&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=prof-0-sb-share-button"><span>Share profile</span></a>
+
+</div>
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+    
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+
+      
+      
+
+
+
+
+<ul class="profile-actions-secondary">
+        <li>
+          <a name="addRecommendations" href="http://www.linkedin.com/recRequests?cor=&amp;trk=prof-0-sb-ask_for_rec-link">Ask for recommendations</a>
+        </li>
+        <li>
+          <a href="http://www.linkedin.com/profile/edit-profile-in-another-language?goback=%2Enpe_*1_*1_*1_*1&amp;trk=prof-0-sb-create_pial-link">Create your profile in another language</a>
+        </li>
+</ul>
+
+
+
+
+
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+<div class="profile-completeness">
+    <span class="progress-meter" title="95% Complete"><span class="has-progress" style="width: 95%;"></span></span>
+    <p class="progress"><strong>95%</strong> profile completeness</p>
+
+  
+      <div class="tips" id="resume-import">
+        <h4>Complete your profile quickly</h4>
+        <p class="upload">
+          
+            <a id="yui-gen17" href="#upload-resume"><strong>Import your résumé </strong></a>
+          
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          <script id="controlinit-21" type="text/javascript+initialized" class="li-control">
+                    
+      
+    
+            LI.Controls.addControl('control-21', 'Dialog', {
+            name: 'uploadResumeDialog',
+            type: 'task-modless',
+            content: { 
+              node: 'upload-resume', 
+              title: '<strong>Import your r&eacute;sum&eacute; <\/strong>' 
+            }
+          });
+                  </script>
+              
+        
+          
+        
+            
+        
+        
+      
+      
+      
+      
+      
+    
+          to build a complete profile in minutes.
+        </p>
+        
+          <div id="upload-resume" class="dialog-container">
+            
+      
+      
+      
+        
+        <form action="/mupld/res-upld" method="POST" name="resumeUpload" enctype="multipart/form-data" accept-charset="UTF-8">
+        
+       
+       
+    
+              <p class="upload">Upload Microsoft Word, PDF, text or HTML files of up to 500KB. </p>
+              <p><input name="file" size="35" type="file"></p>
+              <p class="actions"><input class="btn-primary" name="upload" value="Upload Résumé" type="submit"><span class="alternate"> or <a href="#resume-import" class="dialog-close">Cancel</a></span></p>
+            
+      
+      
+        
+          
+          <input name="upload_info" value="HYXJKogFD-YbondSo4hyE4lca8Vvd0R3vMcSK5AgLyOXK0R3vYHSWTwRq00zNpaB4abicAufqxHwpGM3xVniitXEqxsXKo3mXfOiWf_QZpBlWy3DU7DKIh_g9q2SWIPm5ly2Tflpe0Vx78RksED7QTXkSyVvf1RMUdBjiMhH5j8wbgqqwk1VEtlWAIGxNIaLD_b7QwY13j2Sc2QmC61VdZKaS2Vuf1_t-Y18IIlpa8SojoMmq01NklYkzVISjs9huFD7VZ_mrjOzWxqDBqropAufsx2Xcydt96DlQTwRq00z5a5DJy" id="upload_info-resumeUpload" type="hidden"><input name="isCSMode" value="false" id="isCSMode-resumeUpload" type="hidden"><input name="csrfToken" value="ajax:4142211357854656029" id="csrfToken-resumeUpload" type="hidden"><input name="sourceAlias" value="0_bDL6Qg16XxC0mXAS8vUxbvElVv3wvoSqKhWatYABScj" id="sourceAlias-resumeUpload" type="hidden">
+          </form>
+        
+        
+      
+    
+          </div>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          <script id="controlinit-22" type="text/javascript+initialized" class="li-control">
+                    
+      
+        
+        
+        /* extlib: _profileresumeimportdialog */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-22', 'ProfileResumeImportDialog', {});
+                  </script>
+              
+        
+          
+        
+            
+        
+        
+      
+      
+      
+      
+      
+    
+        <div id="upload-resume-processing" class="dialog-container processing">
+          <p class="loading"><img src="edit_files/anim_loading_40x40.gif" alt="" width="40" height="40"></p>
+          <p>We are scanning your résumé for experience, education, summary and skills information.</p>
+          <p>You will have an opportunity to review this imported information before changes are made to your profile.</p>
+        </div>
+                  
+      </div>
+    
+
+  
+  <div class="tips">
+    <h4>Profile Completion Tips 
+      <em><a class="" href="http://www.linkedin.com/static?key=pop%2Fpop_more_profile_completeness" onclick="LI.popup( '/static?key=pop%2Fpop_more_profile_completeness', {} ); return false;" title="New window will open">(Why do this?)</a></em>
+    </h4>
+    
+    <ul>
+      
+          
+        
+      
+      
+      
+      
+        <li>
+          <a name="addSpecialties" href="http://www.linkedin.com/profile/edit-summary?locale=en_US&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=mypro_cmplt_spec">
+            Add your specialties
+          </a>
+          <span class="increase">(+5%)</span>      
+        </li>
+      
+      
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+
+        <div class="general-box ad-block">
+          <div class="title"><h6>Advertisement</h6></div>
+          <div class="content">
+            
+            
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+  <script type="text/javascript">
+    
+    var dbl_url = "http://ad.doubleclick.net/adj/linkedin.dart/".replace("adj", "adi");
+       
+    
+        var dbl_src = dbl_url + "nprofile-edit-success;optout=false;lang=en;tile=1;sz=300x250;v=1;u=14gn1Wr3lai6FGk4B4imlh;ue=14gn1Wr3lai6FGk4B4imlh;title=ic;func=eng;co_id=1053;ind=7;csize=i;zip=95134;gdr=m;cntry=us;reg=84;grp=22413;grp=92146;grp=3852152;edu=17959-2005;edu=17926-null;edu=17926-null;jobs=1;sub=0;con=j;age=b;age_num=28;seg=410;seg=282;seg=230;seg=278;seg=426;seg=227;seg=459;ipc=us;cont=na;stat=ca;ipct=na;sjt=39;jpos=0;dcopt=ist;" + encodeURIComponent('extra=null') + ";ord=820349635?";
+      
+    
+        
+            document.write('<iframe id="ad-nprofile-edit-success-1" src="' + dbl_src + '" width="380" height="250" frameborder="0" border="0" scrolling="no" allowtransparency="true"><\/iframe>');
+          
+      
+  </script><iframe id="ad-nprofile-edit-success-1" src="edit_files/nprofile-edit-success.htm" border="0" allowtransparency="true" width="380" frameborder="0" height="250" scrolling="no"></iframe>
+
+    
+          </div>
+        </div>
+
+        <div class="general-box panel">
+          <div class="modules">
+
+                <div class="leo-module mod-util mod-custom stats profile">
+                  <div class="header">
+                    <h3>Who's Viewed My Profile?</h3>
+                  </div>
+                  <div class="content">
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+<p class="stat"><strong class="count"><a href="http://www.linkedin.com/wvmp?showMore=&amp;trk=prof-wvmp-sb-count-0">6</a></strong> <em><a href="http://www.linkedin.com/wvmp?showMore=&amp;trk=prof-wvmp-sb-viewed_by-0">Your profile has been viewed by 6 people in the past 7 days.</a></em></p>
+<p class="stat"><strong class="count">16</strong> <em>You have shown up in search results 16 times in the past 15 days.</em></p>
+                  </div>
+                </div>
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    
+  <div class="leo-module mod-util">
+      <div class="header">
+        <h3><strong>Omar’s Activity</strong></h3>
+        
+        <ul>
+          <li class="edit"><a href="http://www.linkedin.com/mfsettings?displaySettings=">edit</a></li>
+        </ul>
+        
+      </div>
+      <div class="content feed feed-mod feed-redesign">
+        
+        
+          <ul id="yui-gen18" class="chron">
+            
+            
+              <li class="feed-item">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+        
+
+        
+        
+
+        <div class="feed-body mid-13342126">
+
+      
+
+      
+      
+
+    
+  
+      
+        <div class="feed-content">
+      
+    
+    
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=13342126&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewMemberProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=4efc30ca-fd89-4990-8225-5cb90d5929bb&amp;ut=NUS_DIG_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D13342126%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_DIG_CONN-connctr&amp;urlhash=StQd">Omar Sehgal</a></strong></span> is now connected to 
+    
+    
+        
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=24748993&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewConnectionProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=4efc30ca-fd89-4990-8225-5cb90d5929bb&amp;ut=NUS_DIG_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D24748993%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_DIG_CONN-conncte&amp;urlhash=pDlx">Nilesh Karnik</a></strong></span>
+           and 
+      
+  
+    
+        
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=8558616&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewConnectionProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=4efc30ca-fd89-4990-8225-5cb90d5929bb&amp;ut=NUS_DIG_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D8558616%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_DIG_CONN-conncte&amp;urlhash=4pO4">Tapan Ganpule</a></strong></span>
+          
+      
+  
+    
+  
+      
+        </div>
+      
+    
+  
+      
+        <div class="feed-item-meta ">
+        
+      
+          
+      
+        
+          <span class="nus-timestamp">1 day ago</span>
+        
+      
+    
+      
+        
+        <ul class="feed-actions">
+          
+      
+    
+  
+  
+      
+          
+        </ul>
+        
+        </div>
+      
+    
+  
+  
+
+      
+      </div>
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            
+      
+      
+      
+      
+    
+
+
+
+
+
+</li>
+            
+            
+            
+              <li class="feed-item">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+        
+
+        
+        
+
+        <div class="feed-body mid-13342126">
+
+      
+        
+            <a href="http://www.linkedin.com/mfeed?hide=&amp;type=APPM&amp;uid=5469862739012759552+&amp;pk=nprofile-edit-success&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=NUS-delete-my" class="nus-hide-item" title="Delete your update">Hide</a>
+          
+      
+
+      
+      
+
+    
+  
+      
+        <div class="feed-content">
+      
+    
+
+
+  
+          
+          
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=13342126&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewMoreApps&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=5469862739012759552&amp;ut=NUS_APPM_1900&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D13342126%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_APPM-more_1900&amp;urlhash=2pdo">Omar Sehgal </a></strong></span> voted on a Poll: <a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fosview%2Fcanvas%3F_ch_page_id%3D1%26_ch_panel_id%3D1%26_ch_app_id%3D1900%26_applicationId%3D1900%26_ownerId%3D0%26appParams%3D%257B%2522section%2522%3A%2522vote%2522%2C%2522poll_id%2522%3A124950%257D&amp;urlhash=lGFP&amp;trk=NUS_APPM-more_1900">What type of program are you considering? </a>
+    
+
+
+      
+        </div>
+      
+     
+
+      
+        <div class="feed-item-meta ">
+        
+      
+          
+      
+        
+          <span class="nus-timestamp">1 day ago</span>
+        
+      
+    
+      
+        
+        <ul class="feed-actions">
+          
+      
+    
+  
+      
+        
+          
+          
+          
+          
+          
+          
+          
+            
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <li>
+ <span class="show-like">
+ <a href="http://www.linkedin.com/updates?unlike=&amp;scope=13342126&amp;stype=M&amp;topic=5469862739012759552&amp;type=U&amp;a=67EJ&amp;pk=nprofile-edit-success&amp;csrfToken=ajax%3A4142211357854656029&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=NUS_APPM_1900-unlike" class="unlike" data-li-unlike-url="http://www.linkedin.com/updates?unlike=&amp;scope=13342126&amp;stype=M&amp;topic=5469862739012759552&amp;type=U&amp;a=67EJ&amp;ajax=true&amp;csrfToken=ajax%3A4142211357854656029&amp;trk=NUS_APPM_1900-unlike-ajax" rel="like-U-5469862739012759552-M-13342126" title="Click to unlike this update">
+ Unlike
+ </a>
+ <a href="http://www.linkedin.com/updates?like=&amp;scope=13342126&amp;stype=M&amp;topic=5469862739012759552&amp;type=U&amp;a=67EJ&amp;pk=nprofile-edit-success&amp;csrfToken=ajax%3A4142211357854656029&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=NUS_APPM_1900-like" class="like" data-li-like-url="http://www.linkedin.com/updates?like=&amp;scope=13342126&amp;stype=M&amp;topic=5469862739012759552&amp;type=U&amp;a=67EJ&amp;ajax=true&amp;csrfToken=ajax%3A4142211357854656029&amp;trk=NUS_APPM_1900-like-ajax" rel="like-U-5469862739012759552-M-13342126" title="Click to like this update">
+ Like 
+ </a>
+ </span>
+ </li>
+
+
+          
+          
+          
+          
+          
+          
+          
+        
+      
+    
+    
+  
+      
+      
+        
+        
+        
+        
+      
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <li>
+ <a href="http://www.linkedin.com/updates?discuss=&amp;scope=13342126&amp;stype=M&amp;topic=5469862739012759552&amp;type=U&amp;a=67EJ&amp;pk=nprofile-edit-success&amp;goback=%2Enpe_*1_*1_*1_*1&amp;trk=NUS_APPM_1900-num-comment" class="focus-comment-form" title="Click to comment on this update">
+ Comment
+ </a>
+ </li>
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    
+      
+        
+        
+        
+        
+      
+      
+    
+    
+  
+
+      
+          
+        </ul>
+        
+        </div>
+      
+    
+
+      
+      
+        
+        
+        
+        
+      
+      
+        
+      
+        
+      
+    
+        
+      
+        
+        
+        
+        
+      
+      
+    
+    
+
+
+      
+      </div>
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            
+      
+      
+      
+      
+    
+
+
+
+
+
+
+</li>
+            
+              <li class="feed-item">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+        
+
+        
+        
+
+        <div class="feed-body mid-13342126">
+
+      
+
+      
+      
+
+    
+  
+      
+        <div class="feed-content">
+      
+    
+    
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=13342126&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewMemberProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=&amp;ut=NUS_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D13342126%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_CONN-conntr&amp;urlhash=QZqu">Omar Sehgal</a></strong></span> is now connected to 
+  
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=26757217&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewConnectionProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=&amp;ut=NUS_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D26757217%26authType%3Dname%26authToken%3DfMpJ%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_CONN-connte&amp;urlhash=LwlC">Rajiv Prabhakar</a></strong></span>
+  
+      
+        </div>
+      
+    
+  
+      
+        <div class="feed-item-meta ">
+        
+      
+          
+      
+        
+          <span class="nus-timestamp">1 day ago</span>
+        
+      
+    
+      
+        
+        <ul class="feed-actions">
+          
+      
+    
+    
+  
+      
+          
+        </ul>
+        
+        </div>
+      
+    
+  
+  
+
+      
+      </div>
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            
+      
+      
+      
+      
+    
+
+
+
+
+
+</li>
+            
+            
+            
+              <li class="feed-item">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+        
+
+        
+        
+
+        <div class="feed-body mid-13342126">
+
+      
+
+      
+      
+
+    
+  
+      
+        <div class="feed-content">
+      
+    
+    
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=13342126&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewMemberProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=63fce0e9-0a61-437e-a4d7-5d72811fdc5b&amp;ut=NUS_DIG_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D13342126%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_DIG_CONN-connctr&amp;urlhash=StQd">Omar Sehgal</a></strong></span> is now connected to 
+    
+    
+        
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=110769377&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewConnectionProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=63fce0e9-0a61-437e-a4d7-5d72811fdc5b&amp;ut=NUS_DIG_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D110769377%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_DIG_CONN-conncte&amp;urlhash=hc2y">Brian Scully</a></strong></span>
+           and 
+      
+  
+    
+        
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=11589149&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewConnectionProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=63fce0e9-0a61-437e-a4d7-5d72811fdc5b&amp;ut=NUS_DIG_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D11589149%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_DIG_CONN-conncte&amp;urlhash=MQn8">Matt Knapp</a></strong></span>
+          
+      
+  
+    
+  
+      
+        </div>
+      
+    
+  
+      
+        <div class="feed-item-meta ">
+        
+      
+          
+      
+        
+          <span class="nus-timestamp">5 days ago</span>
+        
+      
+    
+      
+        
+        <ul class="feed-actions">
+          
+      
+    
+  
+  
+      
+          
+        </ul>
+        
+        </div>
+      
+    
+  
+  
+
+      
+      </div>
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            
+      
+      
+      
+      
+    
+
+
+
+
+
+</li>
+            
+            
+            
+              <li class="feed-item">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+        
+
+        
+        
+
+        <div class="feed-body mid-13342126">
+
+      
+
+      
+      
+
+    
+  
+      
+        <div class="feed-content">
+      
+    
+    
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=13342126&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewMemberProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=&amp;ut=NUS_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D13342126%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_CONN-conntr&amp;urlhash=QZqu">Omar Sehgal</a></strong></span> is now connected to 
+  
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=115007952&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewConnectionProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=&amp;ut=NUS_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D115007952%26authType%3Dname%26authToken%3DWP63%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_CONN-connte&amp;urlhash=hlaZ">Amish Kagalwala</a></strong></span>
+  
+      
+        </div>
+      
+    
+  
+      
+        <div class="feed-item-meta ">
+        
+      
+          
+      
+        
+          <span class="nus-timestamp">10 days ago</span>
+        
+      
+    
+      
+        
+        <ul class="feed-actions">
+          
+      
+    
+    
+  
+      
+          
+        </ul>
+        
+        </div>
+      
+    
+  
+  
+
+      
+      </div>
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            
+      
+      
+      
+      
+    
+
+
+
+
+
+</li>
+            
+            
+            
+              <li class="feed-item">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+      
+    
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+        
+
+        
+        
+
+        <div class="feed-body mid-13342126">
+
+      
+
+      
+      
+
+    
+  
+      
+        <div class="feed-content">
+      
+    
+    
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=13342126&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewMemberProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=&amp;ut=NUS_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D13342126%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_CONN-conntr&amp;urlhash=QZqu">Omar Sehgal</a></strong></span> is now connected to 
+  
+      
+       <span class="miniprofile-container /miniprofile?view=&amp;vieweeID=2763090&amp;context=nus"><strong>
+       
+    <a href="http://www.linkedin.com/nus-trk?trkact=viewConnectionProfile&amp;pk=nprofile-edit-success&amp;pp=1&amp;poster=13342126&amp;uid=&amp;ut=NUS_CONN&amp;r=&amp;url=http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview%3Fid%3D2763090%26authType%3Dname%26authToken%3DBwTr%26goback%3D%252Enpe_*1_*1_*1_*1%26trk%3DNUS_CONN-connte&amp;urlhash=o8G6">Arun Inapakolla</a></strong></span>
+  
+      
+        </div>
+      
+    
+  
+      
+        <div class="feed-item-meta ">
+        
+      
+          
+      
+        
+          <span class="nus-timestamp">12 days ago</span>
+        
+      
+    
+      
+        
+        <ul class="feed-actions">
+          
+      
+    
+    
+  
+      
+          
+        </ul>
+        
+        </div>
+      
+    
+  
+  
+
+      
+      </div>
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            
+      
+      
+      
+      
+    
+
+
+
+
+
+</li>
+            
+            
+          </ul>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          <script id="controlinit-23" type="text/javascript+initialized" class="li-control">
+                    
+      
+        
+        
+        /* extlib: _nusdeleteupdate */
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+LI.i18n.register( 'NusDeleteUpdate-are-you', 'Are you sure you want to delete this update?' );
+LI.i18n.register( 'NusDeleteUpdate-yes',   'Yes, please delete it' );
+LI.i18n.register( 'NusDeleteUpdate-or', 'or' );
+LI.i18n.register( 'NusDeleteUpdate-cancel',   'Cancel' );
+LI.i18n.register( 'NusDeleteUpdate-please-confirm',   'Please Confirm' );
+
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-23', 'NusDeleteUpdate', {});
+                  </script>
+              
+        
+          
+        
+            
+        
+        
+      
+      
+      
+      
+      
+    
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          <script id="controlinit-24" type="text/javascript+initialized" class="li-control">
+                    
+      
+        
+        
+        /* extlib: _nusliking */
+          
+        
+        
+        
+        
+      
+    
+            LI.Controls.addControl('control-24', 'NusLiking', {});
+                  </script>
+              
+        
+          
+        
+            
+        
+        
+      
+      
+      
+      
+      
+    
+        <p class="more"><a href="http://www.linkedin.com/profile?viewFeed=&amp;authToken=u5q0&amp;authType=name&amp;key=13342126&amp;goback=%2Enpe_*1_*1_*1_*1">See more <strong>Activity</strong> »</a></p>
+      </div>
+  </div>
+
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    
+    
+
+
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+     
+      
+    
+       
+      
+      
+     
+      
+        
+      
+
+     
+
+     
+       
+       
+       
+       
+           
+           <div class="leo-module mod-util connections">
+             <div class="header">
+               <h3><strong>Omar’s Connections</strong> (207)</h3>
+             </div>
+             <div class="content">
+               
+                 
+                 <ul>
+                     
+                     
+                       <li>
+                         
+                         <strong>
+                           <a href="http://www.linkedin.com/profile/view?id=48382481&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Vrinda's Profile" name="browseConShared" rel="contact">
+                             <span name="firstName">Vrinda</span> <span name="lastName">Kailash</span>
+                           </a>
+                         </strong><br>
+                         <span class="headline">Computer Systems Analyst</span>
+                         
+                       </li>
+                     
+                       <li>
+                         
+                         <strong>
+                           <a href="http://www.linkedin.com/profile/view?id=13144&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Greg's Profile" name="browseConShared" rel="contact">
+                             <span name="firstName">Greg</span> <span name="lastName">Spencer</span>
+                           </a>
+                         </strong><br>
+                         <span class="headline">Senior Software Engineer at Google</span>
+                         
+                       </li>
+                     
+                       <li>
+                         
+                         <strong>
+                           <a href="http://www.linkedin.com/profile/view?id=2283202&amp;goback=%2Enpe_*1_*1_*1_*1" title="View Vikas's Profile" name="browseConShared" rel="contact">
+                             <span name="firstName">Vikas</span> <span name="lastName">Shah</span>
+                           </a>
+                         </strong><br>
+                         <span class="headline">Director, Global Cloud Alliances at SuccessFactors</span>
+                         
+                       </li>
+                     
+                     
+                 </ul>
+               
+
+               
+               <p class="more"><a href="http://www.linkedin.com/profile?viewConns=&amp;key=13342126&amp;goback=%2Enpe_*1_*1_*1_*1" name="seeMoreConnections">See all <strong>Connections</strong> »</a></p>
+             </div>
+           </div>
+
+           
+             <div class="note"><p><strong>Note:</strong> Currently your connections are <strong>allowed</strong> to view your connections list. <a href="https://www.linkedin.com/secure/settings?browse=&amp;goback=%2Enpe_*1_*1_*1_*1" name="allowedToView">Edit</a></p></div>
+           
+         
+       
+       
+       
+     
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+	
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+  <div class="leo-module mod-util">
+    <div class="header">
+      <h3><strong>Omar Recommends (2)</strong>
+      </h3>
+      
+        <ul>
+          <li class="edit"><a href="http://www.linkedin.com/recommendations?prs=">edit</a></li>
+        </ul>
+      
+    </div>
+    <div class="content">
+      <ul name="browseRecommendationList">
+        
+          <li name="browseRecommendation">
+            <p><strong>
+              
+	              	<a href="http://www.linkedin.com/profile/view?id=2710769&amp;authType=name&amp;authToken=xv1J" title="View Tony's profile" name="viewRecViewProfile">Tony Sehgal</a></strong>,
+            
+              
+                  
+                    <em class="headline">Production Manager, Presenter, Inc.</em>
+                  
+                
+          
+          
+            </p>
+            
+              <p class="quote"><a href="http://www.linkedin.com/profile/recommendations?id=13342126&amp;authType=name&amp;authToken=u5q0#rec6248796" title="View recommendation" name="viewRecViewRec">Tony was an awesome manager to have. His thorough...</a></p>
+            
+          </li>
+        
+          <li name="browseRecommendation">
+            <p><strong>
+              
+	              	<a href="http://www.linkedin.com/profile/view?id=2710250&amp;authType=name&amp;authToken=rTfa" title="View Rohit's profile" name="viewRecViewProfile">Rohit Vachher</a></strong>,
+            
+              
+                  
+                    <em class="headline">Component Engineer/Tech Lead, Intel Corp</em>
+                  
+                
+          
+          
+            </p>
+            
+              <p class="quote"><a href="http://www.linkedin.com/profile/recommendations?id=13342126&amp;authType=name&amp;authToken=u5q0#rec5995244" title="View recommendation" name="viewRecViewRec">Rohit has a strong skill set combining technical...</a></p>
+            
+          </li>
+        
+      </ul>
+      
+        
+            <p class="more"><a href="http://www.linkedin.com/recommendations?prs=" name="viewRecMorePeople">Manage <strong>Recommendations</strong> »</a></p>
+          
+      
+    </div>
+  </div>
+
+
+
+          
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+      
+    
+  
+      
+      
+  
+      
+      
+
+      
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </div>
+      </div>
+    </div>
+
+  
+       </div>
+</div>
+      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<script type="text/javascript">LI.Controls.processQueue();</script>
+    
+
+    
+      
+    
+      
+    
+      
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ LI_WCT([
+ "control-4",
+ "control-5",
+ "control-6",
+ "control-7",
+ "control-8",
+ "control-9",
+ "control-10",
+ "control-11",
+ "control-12",
+ "control-13",
+ "control-14",
+ "control-15",
+ "control-16",
+ "control-17",
+ "control-18",
+ "control-19",
+ "control-20",
+ "control-21",
+ "control-22",
+ "control-23",
+ "control-24",
+ ]);
+ 
+ 
+ 
+ </script>
+ 
+
+
+<div id="footer">
+ <div class="wrapper">
+ <ul class="nav-footer">
+ <li>
+ 
+ <a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fhelp%2Elinkedin%2Ecom%2F&amp;urlhash=_dKL&amp;trk=help-en" target="_blank" rel="nofollow"><strong>Help Center</strong></a>
+ </li>
+ <li><a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fpress%2Elinkedin%2Ecom%2Fabout&amp;urlhash=ONnW">About</a></li>
+ <li><a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fblog%2Elinkedin%2Ecom%2F&amp;urlhash=ULil">Blog</a></li>
+ <li><a href="http://www.linkedin.com/static?key=jobs&amp;trk=hb_ft_work">Careers</a></li>
+ <li><a href="http://www.linkedin.com/advertising?src=en-all-el-li-hb_ft_ads&amp;trk=hb_ft_ads">Advertising</a></li>
+ <li><a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Ftalent%2Elinkedin%2Ecom%2F%3Fpin%3Dtr02&amp;urlhash=zJmW">Recruiting Solutions</a></li>
+ <li><a href="http://www.linkedin.com/static?key=tools&amp;trk=hb_ft_tools">Tools</a></li>
+ <li><a href="http://www.linkedin.com/static?key=mobile&amp;trk=hb_ft_mobile">Mobile</a></li>
+ <li><a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fdeveloper%2Elinkedin%2Ecom&amp;urlhash=EFv_">Developers</a></li>
+ <li><a href="http://www.linkedin.com/publishers?trk=hb_ft_pubs">Publishers</a></li>
+ <li class="" id="nav-utility-lang">
+ <a href="https://www.linkedin.com/secure/settings">Language</a>
+ 
+ <form name="languageSelectorForm" action="/languageSelector" method="POST" accept-charset="UTF-8">
+ 
+ <ul id="lang-list">
+ <li class="de"><a href="https://www.linkedin.com/secure/settings" lang="de"><span>Deutsch</span></a></li>
+ <li class="selected en"><a href="https://www.linkedin.com/secure/settings" lang="en"><strong>English</strong></a></li>
+ <li class="es"><a href="https://www.linkedin.com/secure/settings" lang="es"><span>Español</span></a></li>
+ <li class="fr"><a href="https://www.linkedin.com/secure/settings" lang="fr"><span>Français</span></a></li>
+ <li class="it"><a href="https://www.linkedin.com/secure/settings" lang="it"><span>Italiano</span></a></li>
+ <li class="pt"><a href="https://www.linkedin.com/secure/settings" lang="pt"><span>Português</span></a></li>
+ </ul>
+ 
+ <input name="i18nLang" value="" type="hidden">
+ <input name="currenturl" value="http%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fedit%3Ftrk%3Dhb_tab_pro_top%26urlhash%3D3WHv" type="hidden">
+ </form>
+ 
+ </li>
+ <li class="last">
+ <a href="https://www.linkedin.com/secure/purchase?displayProducts=&amp;_ra=sub&amp;_pt=sub&amp;utm_source=Footer&amp;utm_medium=onsite&amp;utm_campaign=Subs&amp;trk=hb_ft_upyracct"><strong>Upgrade My Account</strong></a>
+ </li>
+ </ul>
+ <p id="copyright">LinkedIn Corporation © 2011</p>
+ <ul id="nav-legal">
+ <li><a href="http://www.linkedin.com/static?key=user_agreement&amp;trk=hb_ft_userag">User Agreement</a></li>
+ <li><a href="http://www.linkedin.com/static?key=privacy_policy&amp;trk=hb_ft_priv">Privacy Policy</a></li>
+ <li class=""><a href="http://www.linkedin.com/static?key=copyright_policy&amp;trk=hb_ft_copy">Copyright Policy</a></li>
+ <li class="last" id="feedback-request">
+ 
+ 
+ 
+ <a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fhelp%2Elinkedin%2Ecom%2F&amp;urlhash=_dKL&amp;trk=help-en" target="_blank" rel="nofollow"><strong>Send Feedback</strong></a>
+ 
+ 
+ 
+ 
+ 
+ 
+ <script id="controlinit-25" type="text/javascript+initialized" class="li-control">
+ 
+ 
+ LI.Controls.setInitialized(YDom.get('control-25'));
+ </script>
+ <script type="linkedin/control" data-li-on="click">
+ {"name":"Dialog", "config": {
+ name:'feedback-dialog',
+ type:'task-modeless',
+ content:{
+ url: LI.FeedbackDialogDependencies.url,
+ title:'Send Feedback'
+ },
+ dependencies: 'LI.FeedbackDialogDependencies'
+ }}
+ </script>
+ 
+ 
+ </li>
+ </ul>
+ </div>
+</div>
+
+
+
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ LI_WCT([
+ "control-25",
+ ]);
+ 
+ </script>
+ 
+
+ 
+<script type="text/javascript">
+ 
+ 
+ if ( typeof( oUISettings ) !== 'undefined' ) {
+ oUISettings.saveSettingsURL = "/lite/ui-settings-save?csrfToken=ajax%3A4142211357854656029";
+ }
+
+ if ( typeof( WebTracking ) !== 'undefined' ) {
+ WebTracking.saveWebActionTrackURL = "/lite/web-action-track?csrfToken=ajax%3A4142211357854656029";
+ }
+ if ( typeof( SearchWebTracking ) !== 'undefined' ) {
+ SearchWebTracking.saveSearchWebActionTrackURL = "/wt?csrfToken=ajax%3A4142211357854656029"; 
+ }
+ 
+</script>
+
+
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ 
+ 
+ </script>
+ 
+<script type="text/javascript">
+if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+{
+ WEBTRACK_GLOBAL.record('postCatchAllParseControl');
+}
+</script>
+
+<script type="text/javascript">
+if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+{
+ WEBTRACK_GLOBAL.record('preFooterGlobalJS');
+}
+</script>
+
+
+ 
+ 
+ 
+ 
+ 
+
+ <script type="text/javascript" src="edit_files/js_004"></script>
+ 
+
+<script type="text/javascript">
+if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+{
+ WEBTRACK_GLOBAL.record('postFooterGlobalJS');
+}
+</script>       
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            
+      
+      
+    
+                    <script type="text/javascript" src="edit_files/js_003"></script>
+    
+
+    <script type="text/javascript">
+      
+      gadgets.container = new gadgets.ChameleonContainer(1);
+      gadgets.container.setView('profile');
+     // set the chameleon app non-dwr urls
+      if ( typeof( ChameleonService ) !== 'undefined' ) {
+       ChameleonService.saveAppPreferencesURL = "/lite/save-cham-app-prefs?csrfToken=ajax%3A4142211357854656029";
+       ChameleonService.deleteOSAppURL = "/lite/del-cham-app?csrfToken=ajax%3A4142211357854656029";
+      //Open social
+      ChameleonService.init();
+      //Chameleon, sets up the gadget container controls and the proeprties for open social remote rpc
+            YDom.addClass( 'profile-applications', 'installed-apps');
+      //Chameleon,attaches the handlers to open social remove/edit buttons
+      setupModules.addOSHandler= function(panelID) {};
+      setupModules.init(3);
+      itemMarquee.init("teaser","div");
+     }
+    </script>
+    
+          
+    
+          
+    
+          
+    
+          
+    
+      
+      <script type="text/javascript">
+          
+    
+      </script>
+    
+       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<script type="text/javascript">LI.Controls.processQueue();</script>
+
+
+
+ 
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+<script type="text/javascript">
+  YEvent.on( window, 'load', function() {
+    _qoptions = { qacct:"p-b3sGjMtCFrexE" };
+    YAHOO.util.Get.script( 'http://edge.quantserve.com/quant.js' );
+  });
+</script>
+<noscript>
+  <a href="http://www.quantcast.com/p-b3sGjMtCFrexE" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-b3sGjMtCFrexE.gif" style="display: none;" height="1" width="1" alt=""/></a>
+</noscript>
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+
+<script type="text/javascript">
+  YEvent.on( window, 'load', function() {
+    YAHOO.util.Get.script( 'http://b.scorecardresearch.com/beacon.js', {
+      onSuccess: function() {
+        COMSCORE.beacon({ c1:2, c2:6402952, c3:"", c4:"", c5:"", c6:"", c15:"" });
+      }
+    });
+  });
+</script>
+<noscript>
+  
+      <img src="http://b.scorecardresearch.com/b?c1=2&amp;c2=6402952&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cv=1.3&amp;cj=1" style="display:none" width="0" height="0" alt="" />
+    
+</noscript>
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+<script type="text/javascript">
+  YEvent.on( window, 'load', function() {
+    (function () {
+      var protocol = 'http:';
+      var d = new Image(1, 1);
+      d.onerror = d.onload = function () { d.onerror = d.onload = null; };    
+      d.src = [
+        protocol,
+        "//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603751h&cg=0&cc=1&si=", 
+        escape(window.location.href), "&rp=", 
+        escape(document.referrer),   
+        "&ts=compact&rnd=", 
+        (new Date()).getTime()
+      ].join('');
+    })();
+  });
+</script>
+<noscript>
+  
+      <img src="http://secure-us.imrworldwide.com/cgi-bin/m?ci=us-603751h&cg=0&cc=1&ts=noscript"
+    width="1" height="1" alt="" style="display:none"/>
+    
+</noscript>
+
+
+<script type="text/javascript">
+if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+{
+ WEBTRACK_GLOBAL.record('preTrackerPixel');
+}
+</script>
+<img src="edit_files/tracker.gif" alt="" width="1" height="1">
+
+<script type="text/javascript">
+if(typeof(WEBTRACK_GLOBAL) !== 'undefined')
+{
+ WEBTRACK_GLOBAL.record('postTrackerPixel');
+}
+</script>
+</div></body></html>
